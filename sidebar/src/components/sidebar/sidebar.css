@@ -1,0 +1,32 @@
+.nav-item {
+	border-radius: 5px;
+}
+.nav-item:hover {
+	background-color: #ffffff11;
+}
+.nav-item.active {
+	background-color: #ffffff44;
+}
+
+.toggle-button {
+	position: absolute;
+	left: 65px;
+	top: calc(50vh - 5px);
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #b4b4b4;
+	cursor: pointer;
+}
+
+.toggle-button-svg {
+	height: 24px;
+	width: 24px;
+}
+
+.expanded {
+	width: 280px !important;
+	& > .toggle-button {
+		left: 265px !important;
+	}
+}
