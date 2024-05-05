@@ -7,6 +7,16 @@
     cursor: pointer;
 }
 
+.hovered {
+    background-color: var(--gray);
+    width: 285px !important;
+    /* & > div > a > span {
+        display: block !important;
+    } */
+    display: flex;
+    align-items: center;
+}
+
 .nav-item:hover.span {
     display: block !important;
 }

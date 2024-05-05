@@ -3,7 +3,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import * as icons from "@fortawesome/free-solid-svg-icons";
 import { isObject, isNull } from "lodash";
 import Sidebar from "./components/sidebar/sidebar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./components/home/home";
@@ -47,13 +47,19 @@ function App() {
         },
         {
             id: 5,
+            name: "Blog",
+            url: "blog",
+            icon: "fa-users",
+        },
+        {
+            id: 6,
             name: "Careers",
             url: "careers",
             icon: "fa-users",
         },
     ];
     return (
-        <Router>
+        <BrowserRouter>
             <div className="app">
                 <div className="header">
                     <Header />
@@ -64,11 +70,11 @@ function App() {
                     </aside>
                     <main className="main-content">
                         <Routes>
-                            <Route path="/" exact element={Home} />
-                            <Route path="/blog" element={Blog} />
-                            <Route path="/about" element={About} />
-                            <Route path="/contact" element={Contact} />
-                            <Route path="/" exact element={NotFound} />
+                            <Route path="/" exact element={<Home />} />
+                            <Route path="/blog" element={<Blog />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="*" exact element={<NotFound />} />
                         </Routes>
                     </main>
                 </div>
@@ -76,7 +82,7 @@ function App() {
                     <Footer />
                 </div>
             </div>
-        </Router>
+        </BrowserRouter>
     );
 }
 

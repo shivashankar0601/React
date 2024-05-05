@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./sidebar.css"; // Import the CSS file for styling
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ menuItems }) => {
+    let navigate = useNavigate();
     const [expanded, setExpanded] = useState(true);
     const [activeItem, setActiveItem] = useState(1);
 
     const toggleActive = (item) => {
         setActiveItem(item.id);
+        navigate(item.url);
     };
 
     return (
@@ -20,6 +23,12 @@ const Sidebar = ({ menuItems }) => {
                             item.id === activeItem ? "active" : ""
                         }`}
                         onClick={() => toggleActive(item)}
+                        onMouseEnter={(e) =>
+                            e.currentTarget.classList.add("hovered")
+                        }
+                        onMouseLeave={(e) =>
+                            e.currentTarget.classList.remove("hovered")
+                        }
                     >
                         <div className="menu-item">
                             <a
