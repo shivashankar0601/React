@@ -4,15 +4,14 @@ import "./sidebar.css"; // Import the CSS file for styling
 
 const Sidebar = ({ menuItems }) => {
     const [expanded, setExpanded] = useState(true);
-    const [activeItem, setActiveItem] = useState(null);
-    const [hoveredItem, setHoveredItem] = useState(null);
+    const [activeItem, setActiveItem] = useState(1);
 
     const toggleActive = (item) => {
-        setActiveItem(item.id === activeItem ? null : item.id);
+        setActiveItem(item.id);
     };
 
     return (
-        <div className={`${expanded ? "expanded" : "collapsed"}`}>
+        <div className={`sidebar ${expanded ? "expanded" : "collapsed"}`}>
             <ul className="nav nav-pills flex-column mb-auto">
                 {menuItems.map((item) => (
                     <li
@@ -21,19 +20,21 @@ const Sidebar = ({ menuItems }) => {
                             item.id === activeItem ? "active" : ""
                         }`}
                         onClick={() => toggleActive(item)}
-                        onMouseEnter={() => setHoveredItem(item.id)}
-                        onMouseLeave={() => setHoveredItem(null)}
                     >
                         <div className="menu-item">
                             <a
                                 href="#"
-                                className="nav-link text-white p-3"
+                                className="nav-link text-white"
                                 aria-current="page"
                             >
                                 <FontAwesomeIcon icon={item.icon} />
-                                {expanded || hoveredItem === item.id ? (
-                                    <span className="label">{item.name}</span>
-                                ) : null}
+                                <span
+                                    className={`label ${
+                                        !expanded ? "d-none" : ""
+                                    }`}
+                                >
+                                    {item.name}
+                                </span>
                             </a>
                         </div>
                     </li>

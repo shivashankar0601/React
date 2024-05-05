@@ -1,3 +1,9 @@
+:root {
+    --gray: #ffffff11;
+    --light-gray: #ffffff44;
+    --black: #000000;
+}
+
 body,
 html {
     margin: 0;
@@ -12,14 +18,14 @@ html {
 }
 
 .header {
-    background-color: #333;
-    color: white;
+    /* background-color: #333; */
+    /* color: white;
     padding: 10px;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    height: 56px;
-    border-bottom: 1px solid white;
+    z-index: 1000; */
+    height: 54px;
+    /* border-bottom: 1px solid white; */
 }
 
 .content-wrapper {
@@ -28,13 +34,11 @@ html {
 }
 
 .sidebar {
-    width: 200px;
+    width: 300px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    color: white;
-    transition: width 0.3s; /* Add transition for smooth animation */
 }
 
 .main-content {

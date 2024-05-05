@@ -59,7 +59,7 @@ function App() {
                     <Header />
                 </div>
                 <div className="content-wrapper">
-                    <aside className="sidebar bg-dark">
+                    <aside className="bg-dark">
                         <Sidebar menuItems={menuItems} />
                     </aside>
                     <main className="main-content">
