@@ -1,32 +1,75 @@
 .nav-item {
-	border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #000000ff;
 }
-.nav-item:hover {
-	background-color: #ffffff11;
+
+.nav-item:hover > .menu-item {
+    background-color: #ffffff11;
+    width: 248px !important;
+    /* height: 48px; */
+    & > div > a > span {
+        display: block !important;
+    }
+    /*display: flex;
+	align-items: center; */
 }
+
 .nav-item.active {
-	background-color: #ffffff44;
+    background-color: #ffffff44;
+}
+/* 
+.nav-item.active:not(.expanded) {
+	width: 52px;
+} */
+
+.nav-link {
+    align-items: center;
+}
+
+.nav-item .nav-link {
+    display: inline-flex;
+    gap: 15px;
 }
 
 .toggle-button {
-	position: absolute;
-	left: 65px;
-	top: calc(50vh - 5px);
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	background-color: #b4b4b4;
-	cursor: pointer;
+    position: absolute;
+    left: 65px;
+    top: calc(50vh - 5px);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #b4b4b4;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .toggle-button-svg {
-	height: 24px;
-	width: 24px;
+    height: 24px;
+    width: 24px;
 }
 
 .expanded {
-	width: 280px !important;
-	& > .toggle-button {
-		left: 265px !important;
-	}
+    width: 280px !important;
+    transition: width 0.5s ease;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+
+    & > .toggle-button {
+        left: 265px !important;
+        transition: left 0.5s;
+        -webkit-transition: left 0.5s;
+        -moz-transition: left 0.5s;
+    }
+}
+
+.collapsed {
+    width: 80px;
+    transition: width 0.5s ease;
+    & > .toggle-button {
+        transition: left 0.5s;
+    }
 }
