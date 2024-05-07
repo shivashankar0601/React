@@ -1,4 +1,13 @@
 import React from "react";
+import aboutImage from "../../assets/images/about/about-image.svg";
+import brand from "../../assets/images/hero/brand.svg";
+import heroImage from "../../assets/images/hero/hero-image.svg";
+import shape from "../../assets/images/hero/dotted-shape.svg";
+import shapeTwo from "../../assets/images/hero/dotted-shape.svg";
+// import  from ;
+// import  from ;
+// import  from ;
+
 const Home = () => {
     return (
         <div>
@@ -51,14 +60,9 @@ const Home = () => {
             {/*====== Favicon Icon ======*/}
             <link
                 rel="shortcut icon"
-                href="assets/images/favicon.svg"
+                href="../../assets/images/favicon.svg"
                 type="image/svg"
             />
-            {/* ===== All CSS files ===== */}
-            {/* <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="assets/css/animate.css" />
-            <link rel="stylesheet" href="assets/css/lineicons.css" />
-            <link rel="stylesheet" href="assets/css/ud-styles.css" /> */}
             {/* ====== Header Start ====== */}
 
             {/* Header here */}
@@ -73,16 +77,31 @@ const Home = () => {
                                 className="ud-hero-content wow fadeInUp"
                                 data-wow-delay=".2s"
                             >
-                                <h1 className="ud-hero-title">
-                                    Open-Source Web Template for SaaS, Startup,
-                                    Apps, and More
+                                {/* <h1 className="ud-hero-title">
+                                    One-stop destination for cutting-edge
+                                    digital solutions
                                 </h1>
                                 <p className="ud-hero-desc">
-                                    Multidisciplinary Web Template Built with
-                                    Your Favourite Technology - HTML Bootstrap,
-                                    Tailwind and React NextJS.
+                                    Elevate your digital presence with our
+                                    comprehensive suite of services: from
+                                    stunning web design to advanced AI and
+                                    robotics solutions, we've got you covered
+                                    for all your tech needs. Welcome to
+                                    innovation, welcome to LN Sols.
+                                </p> */}
+
+                                <h1 className="ud-hero-title">
+                                    Unlock Your Potential
+                                </h1>
+                                <p className="ud-hero-desc">
+                                    Empowering your journey to success, we blend
+                                    visionary web development, transformative
+                                    cloud services, and insightful data
+                                    analytics. Step into a future of innovation
+                                    and growth with
                                 </p>
-                                <ul className="ud-hero-buttons">
+
+                                {/* <ul className="ud-hero-buttons">
                                     <li>
                                         <a
                                             href="https://links.uideck.com/play-bootstrap-download"
@@ -104,32 +123,26 @@ const Home = () => {
                                             <i className="lni lni-arrow-right" />
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                             <div
                                 className="ud-hero-brands-wrapper wow fadeInUp"
                                 data-wow-delay=".3s"
                             >
-                                <img
-                                    src="assets/images/hero/brand.svg"
-                                    alt="brand"
-                                />
+                                <img src={brand} alt="brand" />
                             </div>
                             <div
                                 className="ud-hero-image wow fadeInUp"
                                 data-wow-delay=".25s"
                             >
+                                <img src={heroImage} alt="hero-image" />
                                 <img
-                                    src="assets/images/hero/hero-image.svg"
-                                    alt="hero-image"
-                                />
-                                <img
-                                    src="assets/images/hero/dotted-shape.svg"
+                                    src={shape}
                                     alt="shape"
                                     className="shape shape-1"
                                 />
                                 <img
-                                    src="assets/images/hero/dotted-shape.svg"
+                                    src={shapeTwo}
                                     alt="shape"
                                     className="shape shape-2"
                                 />
@@ -296,10 +309,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="ud-about-image">
-                            <img
-                                src="assets/images/about/about-image.svg"
-                                alt="about-image"
-                            />
+                            <img src={aboutImage} alt="about-image" />
                         </div>
                     </div>
                 </div>
@@ -417,7 +427,7 @@ const Home = () => {
             {/* ====== FAQ Start ====== */}
             <section id="faq" className="ud-faq">
                 <div className="shape">
-                    <img src="assets/images/faq/shape.svg" alt="shape" />
+                    <img src="../../assets/images/faq/shape.svg" alt="shape" />
                 </div>
                 <div className="container">
                     <div className="row">
@@ -685,7 +695,7 @@ const Home = () => {
                                 <div className="ud-testimonial-info">
                                     <div className="ud-testimonial-image">
                                         <img
-                                            src="assets/images/testimonials/author-01.png"
+                                            src="../../assets/images/testimonials/author-01.png"
                                             alt="author"
                                         />
                                     </div>
@@ -718,7 +728,7 @@ const Home = () => {
                                 <div className="ud-testimonial-info">
                                     <div className="ud-testimonial-image">
                                         <img
-                                            src="assets/images/testimonials/author-02.png"
+                                            src="../../assets/images/testimonials/author-02.png"
                                             alt="author"
                                         />
                                     </div>
@@ -751,7 +761,7 @@ const Home = () => {
                                 <div className="ud-testimonial-info">
                                     <div className="ud-testimonial-image">
                                         <img
-                                            src="assets/images/testimonials/author-03.png"
+                                            src="../../assets/images/testimonials/author-03.png"
                                             alt="author"
                                         />
                                     </div>
@@ -775,31 +785,31 @@ const Home = () => {
                                 <div className="ud-brands-logo">
                                     <div className="ud-single-logo">
                                         <img
-                                            src="assets/images/brands/ayroui.svg"
+                                            src="../../assets/images/brands/ayroui.svg"
                                             alt="ayroui"
                                         />
                                     </div>
                                     <div className="ud-single-logo">
                                         <img
-                                            src="assets/images/brands/uideck.svg"
+                                            src="../../assets/images/brands/uideck.svg"
                                             alt="uideck"
                                         />
                                     </div>
                                     <div className="ud-single-logo">
                                         <img
-                                            src="assets/images/brands/graygrids.svg"
+                                            src="../../assets/images/brands/graygrids.svg"
                                             alt="graygrids"
                                         />
                                     </div>
                                     <div className="ud-single-logo">
                                         <img
-                                            src="assets/images/brands/lineicons.svg"
+                                            src="../../assets/images/brands/lineicons.svg"
                                             alt="lineicons"
                                         />
                                     </div>
                                     <div className="ud-single-logo">
                                         <img
-                                            src="assets/images/brands/ecommerce-html.svg"
+                                            src="../../assets/images/brands/ecommerce-html.svg"
                                             alt="ecommerce-html"
                                         />
                                     </div>
@@ -835,17 +845,17 @@ const Home = () => {
                                 <div className="ud-team-image-wrapper">
                                     <div className="ud-team-image">
                                         <img
-                                            src="assets/images/team/team-01.png"
+                                            src="../../assets/images/team/team-01.png"
                                             alt="team"
                                         />
                                     </div>
                                     <img
-                                        src="assets/images/team/dotted-shape.svg"
+                                        src="../../assets/images/team/dotted-shape.svg"
                                         alt="shape"
                                         className="shape shape-1"
                                     />
                                     <img
-                                        src="assets/images/team/shape-2.svg"
+                                        src="../../assets/images/team/shape-2.svg"
                                         alt="shape"
                                         className="shape shape-2"
                                     />
@@ -881,17 +891,17 @@ const Home = () => {
                                 <div className="ud-team-image-wrapper">
                                     <div className="ud-team-image">
                                         <img
-                                            src="assets/images/team/team-02.png"
+                                            src="../../assets/images/team/team-02.png"
                                             alt="team"
                                         />
                                     </div>
                                     <img
-                                        src="assets/images/team/dotted-shape.svg"
+                                        src="../../assets/images/team/dotted-shape.svg"
                                         alt="shape"
                                         className="shape shape-1"
                                     />
                                     <img
-                                        src="assets/images/team/shape-2.svg"
+                                        src="../../assets/images/team/shape-2.svg"
                                         alt="shape"
                                         className="shape shape-2"
                                     />
@@ -927,17 +937,17 @@ const Home = () => {
                                 <div className="ud-team-image-wrapper">
                                     <div className="ud-team-image">
                                         <img
-                                            src="assets/images/team/team-03.png"
+                                            src="../../assets/images/team/team-03.png"
                                             alt="team"
                                         />
                                     </div>
                                     <img
-                                        src="assets/images/team/dotted-shape.svg"
+                                        src="../../assets/images/team/dotted-shape.svg"
                                         alt="shape"
                                         className="shape shape-1"
                                     />
                                     <img
-                                        src="assets/images/team/shape-2.svg"
+                                        src="../../assets/images/team/shape-2.svg"
                                         alt="shape"
                                         className="shape shape-2"
                                     />
@@ -973,17 +983,17 @@ const Home = () => {
                                 <div className="ud-team-image-wrapper">
                                     <div className="ud-team-image">
                                         <img
-                                            src="assets/images/team/team-04.png"
+                                            src="../../assets/images/team/team-04.png"
                                             alt="team"
                                         />
                                     </div>
                                     <img
-                                        src="assets/images/team/dotted-shape.svg"
+                                        src="../../assets/images/team/dotted-shape.svg"
                                         alt="shape"
                                         className="shape shape-1"
                                     />
                                     <img
-                                        src="assets/images/team/shape-2.svg"
+                                        src="../../assets/images/team/shape-2.svg"
                                         alt="shape"
                                         className="shape shape-2"
                                     />
@@ -1118,13 +1128,22 @@ const Home = () => {
             {/* ====== Footer Start ====== */}
             <footer className="ud-footer wow fadeInUp" data-wow-delay=".15s">
                 <div className="shape shape-1">
-                    <img src="assets/images/footer/shape-1.svg" alt="shape" />
+                    <img
+                        src="../../assets/images/footer/shape-1.svg"
+                        alt="shape"
+                    />
                 </div>
                 <div className="shape shape-2">
-                    <img src="assets/images/footer/shape-2.svg" alt="shape" />
+                    <img
+                        src="../../assets/images/footer/shape-2.svg"
+                        alt="shape"
+                    />
                 </div>
                 <div className="shape shape-3">
-                    <img src="assets/images/footer/shape-3.svg" alt="shape" />
+                    <img
+                        src="../../assets/images/footer/shape-3.svg"
+                        alt="shape"
+                    />
                 </div>
                 <div className="ud-footer-widgets">
                     <div className="container">
@@ -1136,7 +1155,7 @@ const Home = () => {
                                         className="ud-footer-logo"
                                     >
                                         <img
-                                            src="assets/images/logo/logo.svg"
+                                            src="../../assets/images/logo/logo.svg"
                                             alt="logo"
                                         />
                                     </a>
@@ -1284,7 +1303,7 @@ const Home = () => {
                                                 target="_blank"
                                             >
                                                 <img
-                                                    src="assets/images/footer/brands/ayroui.svg"
+                                                    src="../../assets/images/footer/brands/ayroui.svg"
                                                     alt="ayroui"
                                                 />
                                             </a>
@@ -1296,7 +1315,7 @@ const Home = () => {
                                                 target="_blank"
                                             >
                                                 <img
-                                                    src="assets/images/footer/brands/ecommerce-html.svg"
+                                                    src="../../assets/images/footer/brands/ecommerce-html.svg"
                                                     alt="ecommerce-html"
                                                 />
                                             </a>
@@ -1308,7 +1327,7 @@ const Home = () => {
                                                 target="_blank"
                                             >
                                                 <img
-                                                    src="assets/images/footer/brands/graygrids.svg"
+                                                    src="../../assets/images/footer/brands/graygrids.svg"
                                                     alt="graygrids"
                                                 />
                                             </a>
@@ -1320,7 +1339,7 @@ const Home = () => {
                                                 target="_blank"
                                             >
                                                 <img
-                                                    src="assets/images/footer/brands/lineicons.svg"
+                                                    src="../../assets/images/footer/brands/lineicons.svg"
                                                     alt="lineicons"
                                                 />
                                             </a>
@@ -1332,7 +1351,7 @@ const Home = () => {
                                                 target="_blank"
                                             >
                                                 <img
-                                                    src="assets/images/footer/brands/uideck.svg"
+                                                    src="../../assets/images/footer/brands/uideck.svg"
                                                     alt="uideck"
                                                 />
                                             </a>
@@ -1344,7 +1363,7 @@ const Home = () => {
                                                 target="_blank"
                                             >
                                                 <img
-                                                    src="assets/images/footer/brands/tailwindtemplates.svg"
+                                                    src="../../assets/images/footer/brands/tailwindtemplates.svg"
                                                     alt="tailwindtemplates"
                                                 />
                                             </a>

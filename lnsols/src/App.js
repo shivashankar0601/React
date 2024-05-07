@@ -12,6 +12,8 @@ import Contact from "./components/contact/contact";
 import NotFound from "./components/not-found/not-found";
 import WOW from "wowjs";
 import { Component } from "react";
+import logoTwo from "./assets/images/logo/logo-2.svg";
+import logo from "./assets/images/logo/logo.svg";
 
 library.add(
     ...Object.keys(icons)
@@ -87,7 +89,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // new WOW().init();
         window.addEventListener("scroll", this.handleScroll);
         document.querySelector(".back-to-top").onclick = () => {
             this.scrollTo(document.documentElement);
@@ -130,7 +131,7 @@ class App extends Component {
     handleScroll(event) {
         const ud_header = document.querySelector(".ud-header");
         const sticky = ud_header.offsetTop;
-        const logo = document.querySelector(".navbar-brand img");
+        const logoImage = document.querySelector(".navbar-brand img");
 
         if (window.pageYOffset > sticky) {
             ud_header.classList.add("sticky");
@@ -139,9 +140,9 @@ class App extends Component {
         }
         // === logo change
         if (ud_header.classList.contains("sticky")) {
-            logo.src = "./assets/images/logo/logo-2.svg";
+            logoImage.src = logoTwo;
         } else {
-            logo.src = "./assets/images/logo/logo.svg";
+            logoImage.src = logo;
         }
 
         // show or hide the back-top-top button
@@ -174,9 +175,9 @@ class App extends Component {
                             </Routes>
                         </main>
                     </div>
-                    <div className="footer">
+                    {/* <div className="footer">
                         <Footer />
-                    </div>
+                    </div> */}
                 </div>
             </BrowserRouter>
         );

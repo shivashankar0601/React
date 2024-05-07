@@ -1,11 +1,12 @@
 import React from "react";
 import "./header.css";
 // import logo from "./../../assets/logo.jpg";
+import logo from "../../assets/images/logo/logo.svg";
 
 // NavbarBrand component
 const NavbarBrand = () => (
     <a className="navbar-brand" href="/">
-        <img src="../../assets/images/logo/logo.svg" alt="Logo" />
+        <img src={logo} alt="Logo" />
     </a>
 );
 
