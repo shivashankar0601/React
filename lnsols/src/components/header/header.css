@@ -12,3 +12,25 @@
     font-size: 12px;
     font-weight: 500;
 }
+
+/* Overwriting default CSS from bootstrap as per requirement */
+
+.navbar-nav {
+    padding-left: 30px !important;
+}
+
+/* .trapezoid {
+    background: white;
+    transform: perspective(5px) rotateX(0.2deg);
+} */
+
+.ud-feature-content .ud-feature-desc {
+    /* text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
