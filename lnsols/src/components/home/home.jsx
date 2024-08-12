@@ -4,10 +4,12 @@ import brand from "../../assets/images/hero/brand.svg";
 import heroImage from "../../assets/images/hero/hero-image.svg";
 import shape from "../../assets/images/hero/dotted-shape.svg";
 import shapeTwo from "../../assets/images/hero/dotted-shape.svg";
+import titleImage from "../../assets/images/home/titleImage.jpg";
 import WOW from "wowjs";
 import { useNavigate } from "react-router-dom";
 import Testimonials from "../common/testimonials";
 import Contact from "../common/contact";
+import "./home.css";
 class Home extends Component {
     componentDidMount() {
         new WOW.WOW({
@@ -87,7 +89,7 @@ class Home extends Component {
                         <div className="row">
                             <div className="col-lg-12 row">
                                 <div
-                                    className="col-lg-6 ud-hero-content wow fadeInUp"
+                                    className="ud-hero-content wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
                                     {/* <h1 className="ud-hero-title">
@@ -157,18 +159,24 @@ class Home extends Component {
                                     </p>
                                 </div>
 
-                                <div
+                                {/* <div
                                     className="col-md-6 ud-hero-content wow fadeInUp"
                                     data-wow-delay=".35s"
-                                >
-                                    {/* <h1 className="ud-hero-title">
+                                > */}
+                                {/* <h1 className="ud-hero-title">
                                         Empowering future solutions
                                     </h1>
                                     <p className="ud-hero-desc">
                                         Entering in to the realm of future with
                                         future innovative solutions.
                                     </p> */}
-                                </div>
+                                {/* <div className="img-wrap">
+                                        <img
+                                            src={titleImage}
+                                            alt="about-image"
+                                        />
+                                    </div>
+                                </div> */}
 
                                 {/* <div
                                     className="ud-hero-brands-wrapper wow fadeInUp"
