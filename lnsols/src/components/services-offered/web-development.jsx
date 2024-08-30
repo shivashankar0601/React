@@ -1,6 +1,6 @@
 import React from "react";
 import aboutImage from "../../assets/images/about/about-image.svg";
-import Testimonials from "../common/testimonials";
+import Testimonials from "../testimonials/testimonials";
 import Contact from "../common/contact";
 
 const WebDevelopment = () => {

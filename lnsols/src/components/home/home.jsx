@@ -7,7 +7,7 @@ import shapeTwo from "../../assets/images/hero/dotted-shape.svg";
 import titleImage from "../../assets/images/home/titleImage.jpg";
 import WOW from "wowjs";
 import { useNavigate } from "react-router-dom";
-import Testimonials from "../common/testimonials";
+import Testimonials from "../testimonials/testimonials";
 import Contact from "../common/contact";
 import "./home.css";
 class Home extends Component {
@@ -92,114 +92,21 @@ class Home extends Component {
                                     className="ud-hero-content wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
-                                    {/* <h1 className="ud-hero-title">
-                                    One-stop destination for cutting-edge
-                                    digital solutions
-                                </h1>
-                                <p className="ud-hero-desc">
-                                    Elevate your digital presence with our
-                                    comprehensive suite of services: from
-                                    stunning web design to advanced AI and
-                                    robotics solutions, we've got you covered
-                                    for all your tech needs. Welcome to
-                                    innovation, welcome to LN Sols.
-                                </p> */}
-
-                                    {/* <h1 className="ud-hero-title">
-                                        Unlock Your Potential
-                                    </h1>
-                                    <p className="ud-hero-desc">
-                                        Enter a realm of innovation and
-                                        expansion as we propel you towards
-                                        success by seamlessly integrating
-                                        cutting-edge web development,
-                                        revolutionary cloud solutions, and
-                                        enlightening data analysis to your
-                                        products and services.
-                                    </p> */}
-
                                     <h1 className="ud-hero-title">
                                         Empowering future solutions
                                     </h1>
-                                    <p className="ud-hero-desc">
+                                    <p className="ud-hero-desc wow fadeInUp">
                                         Unlock the potential of tomorrow with
                                         our innovative expertise.
                                     </p>
-
-                                    {/* <ul className="ud-hero-buttons">
-                                    <li>
-                                        <a
-                                            href="https://links.uideck.com/play-bootstrap-download"
-                                            rel="nofollow noopener"
-                                            target="_blank"
-                                            className="ud-main-btn ud-white-btn"
-                                        >
-                                            Download Now
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="https://github.com/uideck/play-bootstrap"
-                                            rel="nofollow noopener"
-                                            target="_blank"
-                                            className="ud-main-btn ud-link-btn"
-                                        >
-                                            Learn More{" "}
-                                            <i className="lni lni-arrow-right" />
-                                        </a>
-                                    </li>
-                                </ul> */}
-
-                                    <p
+                                    {/* <p
                                         className="ud-hero-desc wow fadeInUp"
                                         data-wow-delay=".45s"
                                     >
                                         Entering in to the realm of future with
                                         future innovative solutions.
-                                    </p>
-                                </div>
-
-                                {/* <div
-                                    className="col-md-6 ud-hero-content wow fadeInUp"
-                                    data-wow-delay=".35s"
-                                > */}
-                                {/* <h1 className="ud-hero-title">
-                                        Empowering future solutions
-                                    </h1>
-                                    <p className="ud-hero-desc">
-                                        Entering in to the realm of future with
-                                        future innovative solutions.
                                     </p> */}
-                                {/* <div className="img-wrap">
-                                        <img
-                                            src={titleImage}
-                                            alt="about-image"
-                                        />
-                                    </div>
-                                </div> */}
-
-                                {/* <div
-                                    className="ud-hero-brands-wrapper wow fadeInUp"
-                                    data-wow-delay=".3s"
-                                >
-                                    <img src={brand} alt="brand" />
                                 </div>
-                                <div
-                                    className="ud-hero-image wow fadeInUp"
-                                    data-wow-delay=".25s"
-                                >
-                                    <img src={heroImage} alt="hero-image" />
-                                    <img
-                                        src={shape}
-                                        alt="shape"
-                                        className="shape shape-1"
-                                    />
-                                    <img
-                                        src={shapeTwo}
-                                        alt="shape"
-                                        className="shape shape-2"
-                                    />
-                                </div> */}
                             </div>
                         </div>
                     </div>

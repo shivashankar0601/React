@@ -65,7 +65,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
-                                            Features
+                                            Services offered
                                         </a>
                                     </li>
                                     <li>
@@ -79,7 +79,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                        {/* <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
                             <div className="ud-widget">
                                 <h5 className="ud-widget-title">Features</h5>
                                 <ul className="ud-widget-links">
@@ -229,7 +229,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

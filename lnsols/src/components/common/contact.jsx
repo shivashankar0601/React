@@ -10,8 +10,8 @@ const Contact = () => {
                             <div className="ud-contact-title">
                                 <span>CONTACT US</span>
                                 <h2>
-                                    Let’s talk about <br />
-                                    Love to hear from you!
+                                    Let’s talk <br />
+                                    We love to hear from you!
                                 </h2>
                             </div>
                             <div className="ud-contact-info-wrapper">
@@ -21,10 +21,7 @@ const Contact = () => {
                                     </div>
                                     <div className="ud-info-meta">
                                         <h5>Our Location</h5>
-                                        <p>
-                                            Ramanthapur, Hyderabad, Telangana,
-                                            India.
-                                        </p>
+                                        <p>Hyderabad, Telangana, India.</p>
                                     </div>
                                 </div>
                                 <div className="ud-single-info">
