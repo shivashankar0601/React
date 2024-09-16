@@ -1,0 +1,14 @@
+.logo {
+    font-family: "Courier New", Courier, monospace;
+    display: table-column;
+}
+
+.logo-name {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.logo-caption {
+    font-size: 12px;
+    font-weight: 500;
+}
