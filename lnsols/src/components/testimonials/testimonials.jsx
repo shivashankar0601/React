@@ -2,8 +2,10 @@ import React from "react";
 import Carousel from "../utils/carousel/carousel";
 import "./testimonials.css";
 import author from "../../../src/assets/images/testimonials/author-01.png";
+import { isMobile } from "components/utils/device";
 
 const Testimonials = () => {
+    console.log(isMobile() + " is mobile");
     const testimonials = [
         {
             id: 1,
@@ -162,7 +164,10 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <Carousel testimonials={testimonials} />
+                <Carousel
+                    testimonials={testimonials}
+                    maxTestimonials={isMobile() ? 1 : 3}
+                />
             </div>
             {/* ====== Testimonials End ====== */}
         </section>

@@ -23,6 +23,10 @@ const FireParticles = ({ height }) => {
         });
     }, []);
 
+    // const maxParticles = window.matchMedia("(max-width: 768px)").matches
+    //     ? 50
+    //     : 200;
+
     // const particlesLoaded = (container) => {
     //     console.log(container);
     // };

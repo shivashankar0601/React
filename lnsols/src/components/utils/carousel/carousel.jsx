@@ -6,13 +6,13 @@ import "slick-carousel/slick/slick-theme.css";
 import "assets/css/ln-styles.css";
 import StarRating from "components/utils/star-rating";
 
-const Carousel = ({ testimonials }) => {
+const Carousel = ({ testimonials, maxTestimonials }) => {
     var settings = {
         dots: true,
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
-        slidesToShow: 3,
+        slidesToShow: maxTestimonials,
         slidesToScroll: 1,
         // adaptiveHeight: true,
         speed: 1000,

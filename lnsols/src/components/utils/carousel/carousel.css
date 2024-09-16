@@ -53,3 +53,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media (max-width: 768px) {
+    .slick-list {
+        padding-bottom: 30px !important;
+    }
+}

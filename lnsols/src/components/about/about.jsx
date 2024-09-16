@@ -1,7 +1,7 @@
 import CollapsibleSection from "components/utils/collapsible-section/collapsible-section";
 import React from "react";
 
-const About = (props) => {
+const About = () => {
     const sections = [
         {
             heading: "Welcome to LN Sols!",
@@ -37,11 +37,15 @@ const About = (props) => {
     ];
 
     return (
-        <div className="mt-4">
-            {sections.forEach((section) => (
-                <CollapsibleSection section />
+        <>
+            {sections.map((section, index) => (
+                <CollapsibleSection
+                    key={index}
+                    heading={section.heading}
+                    content={section.content}
+                />
             ))}
-        </div>
+        </>
     );
 };
 

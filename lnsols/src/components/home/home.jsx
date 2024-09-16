@@ -301,15 +301,12 @@ class Home extends Component {
                 </section>
                 {/* ====== Features End ====== */}
 
-                <About />
-
                 {/* ====== About Start ====== */}
                 <section id="about" className="ln-about">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="ln-section-title">
-                                    {/* <span>Services</span> */}
                                     <h2>About US</h2>
                                     <p>
                                         Learn how we are redefining the
@@ -318,82 +315,8 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-
-                        {/* <div
-                            className="ln-about-wrapper wow fadeInUp"
-                            data-wow-delay=".2s"
-                        >
-                            <div className="ln-about-content-wrapper"> */}
-                        {/* <div className="ln-about-content"> */}
-                        {/* <div className="ln-about-content">
-                            <span className="tag">About Us</span> */}
-                        <h4>Welcome to LN Sols!</h4>
-                        <p>
-                            At LN Sols, we are passionate about driving digital
-                            transformation through innovative software
-                            solutions. As a dynamic startup founded just six
-                            months ago, our mission is to empower businesses by
-                            delivering top-tier web and mobile applications,
-                            cutting-edge cloud services, and insightful data
-                            analytics. Our vision is to become a trusted partner
-                            in the technology space, known for our commitment to
-                            excellence and customer satisfaction.
-                        </p>
-                        <h4>What We Do</h4>
-                        <p>
-                            We specialize in crafting tailored software
-                            solutions to meet the unique needs of businesses.
-                            From developing robust web and mobile applications
-                            to providing scalable cloud services and
-                            comprehensive data analytics, our goal is to help
-                            you harness the full potential of technology. At LN
-                            Sols, we are dedicated to creating solutions that
-                            not only meet but exceed your expectations.
-                        </p>
-                        <h4>Why Choose Us ?</h4>
-                        <p>
-                            We understand that maintaining and evolving
-                            technology is key to business success. That’s why we
-                            offer an exclusive promotion: enjoy 3-6 months of
-                            free maintenance services when you partner with us.
-                            Our dedicated team ensures that your solutions
-                            remain at peak performance, giving you peace of mind
-                            as you focus on what matters most—growing your
-                            business.
-                        </p>
-                        <h4>Our Culture</h4>
-                        <p>
-                            At LN Sols, we believe in a friendly and inclusive
-                            culture that encourages creativity and
-                            collaboration. We strive to create an environment
-                            where ideas can flourish, and every team member
-                            feels empowered to contribute their best. Our open
-                            and approachable atmosphere ensures that we work
-                            together seamlessly to achieve shared goals and
-                            deliver exceptional results.
-                        </p>
-                        <h4>Join Us on Our Journey</h4>
-                        <p>
-                            As a startup, we are excited about the future and
-                            the opportunities that lie ahead. We are committed
-                            to building long-lasting relationships with our
-                            clients and growing alongside them. Whether you need
-                            a cutting-edge application, reliable cloud services,
-                            or actionable insights through data analytics, LN
-                            Sols is here to help you succeed.
-                        </p>
-                        <p>
-                            Thank you for considering LN Sols. We look forward
-                            to the possibility of working together and making a
-                            positive impact on your business.
-                        </p>
+                        <About />
                     </div>
-                    {/* </div> */}
-                    {/* <div className="ln-about-image">
-                                <img src={aboutImage} alt="about-image" />
-                            </div> */}
-                    {/* </div> */}
-                    {/* </div> */}
                 </section>
                 {/* ====== About End ====== */}
                 {/* ====== Pricing Start ====== */}

@@ -1,11 +1,11 @@
 import "./collapsible-section.css";
 
-const CollapsibleSection = ({ section }) => {
+const CollapsibleSection = ({ heading, content }) => {
     return (
-        <div class="collapsible-card">
-            <h2 class="collapsible-heading">{section.heading}</h2>
-            <div class="collapsible-content">
-                {section.content.map((paragraph, i) => (
+        <div className="ln-collapsible-card wow fadeInUp" data-wow-delay=".25s">
+            <h2 className="ln-collapsible-heading">{heading}</h2>
+            <div className="ln-collapsible-content">
+                {content.map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                 ))}
             </div>
