@@ -24,7 +24,7 @@
     transform: perspective(5px) rotateX(0.2deg);
 } */
 
-.ud-feature-content .ud-feature-desc {
+.ln-feature-content .ln-feature-desc {
     /* text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; */
@@ -33,4 +33,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.brand-logo-tag-name {
+    margin-top: -10px;
+    font-size: 8px;
 }

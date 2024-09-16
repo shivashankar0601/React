@@ -1,110 +1,110 @@
 /* ====== Login CSS ====== */
-.ud-login {
-  padding-top: 80px;
-  padding-bottom: 80px;
+.ln-login {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-.ud-login-wrapper {
-  max-width: 500px;
-  margin: auto;
-  background: var(--white);
-  text-align: center;
-  padding: 60px;
-  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.05);
+.ln-login-wrapper {
+    max-width: 500px;
+    margin: auto;
+    background: var(--white);
+    text-align: center;
+    padding: 60px;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.05);
 
-  .ud-login-logo {
-    margin-bottom: 30px;
-  }
-}
-
-.ud-login-form {
-  .ud-form-group {
-    margin-bottom: 25px;
-
-    input {
-      width: 100%;
-      border: 2px solid #dddddd;
-      border-radius: 4px;
-      padding: 12px 24px;
-      background: #fcfdfe;
-      color: var(--body-color);
-
-      &:focus {
-        border-color: var(--primary-color);
-      }
+    .ln-login-logo {
+        margin-bottom: 30px;
     }
-  }
 }
 
-.ud-socials-connect {
-  padding-top: 10px;
-  padding-bottom: 30px;
+.ln-login-form {
+    .ln-form-group {
+        margin-bottom: 25px;
 
-  p {
-    font-size: 16px;
-    color: var(--body-color);
-    margin-bottom: 10px;
-  }
+        input {
+            width: 100%;
+            border: 2px solid #dddddd;
+            border-radius: 4px;
+            padding: 12px 24px;
+            background: #fcfdfe;
+            color: var(--body-color);
 
-  ul {
-    display: flex;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
+            &:focus {
+                border-color: var(--primary-color);
+            }
+        }
+    }
+}
 
-    li {
-      width: 100%;
+.ln-socials-connect {
+    padding-top: 10px;
+    padding-bottom: 30px;
 
-      a {
-        height: 45px;
-        background: var(--primary-color);
+    p {
+        font-size: 16px;
+        color: var(--body-color);
+        margin-bottom: 10px;
+    }
+
+    ul {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin: 10px;
-        border-radius: 6px;
-        color: var(--white);
-        font-size: 20px;
+        margin-left: -10px;
+        margin-right: -10px;
 
-        &.facebook {
-          background: #4064ac;
+        li {
+            width: 100%;
 
-          &:hover {
-            background: #315294;
-          }
+            a {
+                height: 45px;
+                background: var(--primary-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                border-radius: 6px;
+                color: var(--white);
+                font-size: 20px;
+
+                &.facebook {
+                    background: #4064ac;
+
+                    &:hover {
+                        background: #315294;
+                    }
+                }
+
+                &.twitter {
+                    background: #1c9cea;
+
+                    &:hover {
+                        background: #0f8bd8;
+                    }
+                }
+
+                &.google {
+                    background: #d64937;
+
+                    &:hover {
+                        background: #c53b29;
+                    }
+                }
+            }
         }
-
-        &.twitter {
-          background: #1c9cea;
-
-          &:hover {
-            background: #0f8bd8;
-          }
-        }
-
-        &.google {
-          background: #d64937;
-
-          &:hover {
-            background: #c53b29;
-          }
-        }
-      }
     }
-  }
 }
 
 .forget-pass {
-  font-size: 16px;
-  color: var(--body-color);
-  margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--body-color);
+    margin-bottom: 8px;
 }
 
 .signup-option {
-  color: var(--body-color);
-  font-size: 16px;
+    color: var(--body-color);
+    font-size: 16px;
 
-  a {
-    color: var(--primary-color);
-  }
+    a {
+        color: var(--primary-color);
+    }
 }

@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import aboutImage from "../../assets/images/about/about-image.svg";
-import brand from "../../assets/images/hero/brand.svg";
-import heroImage from "../../assets/images/hero/hero-image.svg";
-import shape from "../../assets/images/hero/dotted-shape.svg";
-import shapeTwo from "../../assets/images/hero/dotted-shape.svg";
-import titleImage from "../../assets/images/home/titleImage.jpg";
+import aboutImage from "assets/images/about/about-image.svg";
+import officeImage from "assets/images/home/office.jpg";
+import successImage from "assets/images/home/success.png";
 import WOW from "wowjs";
-import { useNavigate } from "react-router-dom";
-import Testimonials from "../testimonials/testimonials";
-import Contact from "../common/contact";
+import Testimonials from "components/testimonials/testimonials";
+import Contact from "components/common/contact";
 import "./home.css";
+import FireParticles from "components/utils/fire-particles";
+import About from "components/about/about";
+
 class Home extends Component {
     componentDidMount() {
         new WOW.WOW({
@@ -84,40 +83,67 @@ class Home extends Component {
 
                 {/* ====== Header End ====== */}
                 {/* ====== Hero Start ====== */}
-                <section className="ud-hero" id="home">
+
+                <div className="ln-home-particles">
+                    {/* <FireParticles height="710px" /> */}
+                    <FireParticles height="500px" />
+                </div>
+                <section className="ln-hero" id="home">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-12 row">
+                            <div className="col-lg-12">
                                 <div
-                                    className="ud-hero-content wow fadeInUp"
+                                    className="ln-hero-content wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
-                                    <h1 className="ud-hero-title">
-                                        Empowering future solutions
+                                    <h1 className="ln-hero-title">
+                                        Empowering your business with our
+                                        tailored tech solutions
                                     </h1>
-                                    <p className="ud-hero-desc wow fadeInUp">
-                                        Unlock the potential of tomorrow with
-                                        our innovative expertise.
-                                    </p>
-                                    {/* <p
-                                        className="ud-hero-desc wow fadeInUp"
+                                    {/* <p className="ln-hero-subtitle wow fadeInUp">
+                                        Unlock the future with LN Sols’
+                                        cutting-edge expertise in web and mobile
+                                        applications, cloud services, and data
+                                        analytics—transforming your ideas into
+                                        innovative solutions for the digital
+                                        world.
+                                    </p> */}
+                                    <p
+                                        className="ln-hero-desc wow fadeInUp text-left"
                                         data-wow-delay=".45s"
                                     >
-                                        Entering in to the realm of future with
-                                        future innovative solutions.
-                                    </p> */}
+                                        Unlock the future with LN Sols
+                                        cutting-edge expertise in web and mobile
+                                        applications, cloud services, and data
+                                        analytics — transforming your ideas into
+                                        innovative solutions for the digital
+                                        world.
+                                    </p>
                                 </div>
                             </div>
+                            {/* <div className="col-lg-6">
+                                <div
+                                    className="ln-hero-content wow fadeInUp"
+                                    data-wow-delay=".2s"
+                                >
+                                    <div className="ln-about-image">
+                                        <img
+                                            src={successImage}
+                                            alt="success-image"
+                                        />
+                                    </div>
+                                </div>
+                            </div> */}
                         </div>
                     </div>
                 </section>
                 {/* ====== Hero End ====== */}
                 {/* ====== Features Start ====== */}
-                <section id="services" className="ud-features">
+                <section id="services" className="ln-features">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="ud-section-title">
+                                <div className="ln-section-title">
                                     {/* <span>Services</span> */}
                                     <h2>Our Service Offerings</h2>
                                     <p>
@@ -131,17 +157,17 @@ class Home extends Component {
                         <div className="row">
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-feature wow fadeInUp"
+                                    className="ln-single-feature wow fadeInUp"
                                     data-wow-delay=".1s"
                                 >
-                                    <div className="ud-feature-icon">
+                                    <div className="ln-feature-icon">
                                         <i className="lni lni-gift" />
                                     </div>
-                                    <div className="ud-feature-content">
-                                        <h3 className="ud-feature-title">
+                                    <div className="ln-feature-content">
+                                        <h3 className="ln-feature-title">
                                             Web Services
                                         </h3>
-                                        <p className="ud-feature-desc">
+                                        <p className="ln-feature-desc">
                                             Unleash Your Digital Potential:
                                             Elevate Your Online Presence with
                                             Our Expert Web Development Services
@@ -168,7 +194,7 @@ class Home extends Component {
                                         </p>
                                         <a
                                             href="web-development"
-                                            className="ud-feature-link"
+                                            className="ln-feature-link"
                                         >
                                             Learn More
                                         </a>
@@ -177,17 +203,17 @@ class Home extends Component {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-feature wow fadeInUp"
+                                    className="ln-single-feature wow fadeInUp"
                                     data-wow-delay=".15s"
                                 >
-                                    <div className="ud-feature-icon">
+                                    <div className="ln-feature-icon">
                                         <i className="lni lni-move" />
                                     </div>
-                                    <div className="ud-feature-content">
-                                        <h3 className="ud-feature-title">
+                                    <div className="ln-feature-content">
+                                        <h3 className="ln-feature-title">
                                             Cloud Services
                                         </h3>
-                                        <p className="ud-feature-desc">
+                                        <p className="ln-feature-desc">
                                             Transform Your Business with Our
                                             Cloud Service Solutions: Seamlessly
                                             Scale, Secure, and Innovate in the
@@ -198,7 +224,7 @@ class Home extends Component {
                                         </p>
                                         <a
                                             href="cloud"
-                                            className="ud-feature-link"
+                                            className="ln-feature-link"
                                         >
                                             Learn More
                                         </a>
@@ -207,17 +233,17 @@ class Home extends Component {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-feature wow fadeInUp"
+                                    className="ln-single-feature wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
-                                    <div className="ud-feature-icon">
+                                    <div className="ln-feature-icon">
                                         <i className="lni lni-layout" />
                                     </div>
-                                    <div className="ud-feature-content">
-                                        <h3 className="ud-feature-title">
+                                    <div className="ln-feature-content">
+                                        <h3 className="ln-feature-title">
                                             Data Analytics
                                         </h3>
-                                        <p className="ud-feature-desc">
+                                        <p className="ln-feature-desc">
                                             Elevate Your Business Insights with
                                             Our Data Analytics Services: Uncover
                                             Hidden Trends, Optimize Operations,
@@ -229,7 +255,7 @@ class Home extends Component {
                                         </p>
                                         <a
                                             href="data-analytics"
-                                            className="ud-feature-link"
+                                            className="ln-feature-link"
                                         >
                                             Learn More
                                         </a>
@@ -238,17 +264,17 @@ class Home extends Component {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-feature wow fadeInUp"
+                                    className="ln-single-feature wow fadeInUp"
                                     data-wow-delay=".25s"
                                 >
-                                    <div className="ud-feature-icon">
+                                    <div className="ln-feature-icon">
                                         <i className="lni lni-layers" />
                                     </div>
-                                    <div className="ud-feature-content">
-                                        <h3 className="ud-feature-title">
+                                    <div className="ln-feature-content">
+                                        <h3 className="ln-feature-title">
                                             Mobile Apps
                                         </h3>
-                                        <p className="ud-feature-desc">
+                                        <p className="ln-feature-desc">
                                             Empower Your Business with Our
                                             Mobile App Development Services:
                                             Craft Engaging, High-Performance
@@ -262,7 +288,7 @@ class Home extends Component {
                                         </p>
                                         <a
                                             href="/mobile-apps"
-                                            className="ud-feature-link"
+                                            className="ln-feature-link"
                                             // onClick={navigate("/mobile-apps")}
                                         >
                                             Learn More
@@ -274,55 +300,108 @@ class Home extends Component {
                     </div>
                 </section>
                 {/* ====== Features End ====== */}
+
+                <About />
+
                 {/* ====== About Start ====== */}
-                <section id="about" className="ud-about">
-                    <div className="container">
-                        <div
-                            className="ud-about-wrapper wow fadeInUp"
-                            data-wow-delay=".2s"
-                        >
-                            <div className="ud-about-content-wrapper">
-                                <div className="ud-about-content">
-                                    <span className="tag">About Us</span>
-                                    <h2>
-                                        Brilliant Toolkit to Build Nextgen
-                                        Website Faster.
-                                    </h2>
-                                    <p>
-                                        The main ‘thrust’ is to focus on
-                                        educating attendees on how to best
-                                        protect highly vulnerable business
-                                        applications with interactive panel
-                                        discussions and roundtables led by
-                                        subject matter experts.
-                                    </p>
-                                    <p>
-                                        The main ‘thrust’ is to focus on
-                                        educating attendees on how to best
-                                        protect highly vulnerable business
-                                        applications with interactive panel.
-                                    </p>
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="ud-main-btn"
-                                    >
-                                        Learn More
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="ud-about-image">
-                                <img src={aboutImage} alt="about-image" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* ====== About End ====== */}
-                {/* ====== Pricing Start ====== */}
-                {/* <section id="pricing" className="ud-pricing">
+                <section id="about" className="ln-about">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="ud-section-title mx-auto text-center">
+                                <div className="ln-section-title">
+                                    {/* <span>Services</span> */}
+                                    <h2>About US</h2>
+                                    <p>
+                                        Learn how we are redefining the
+                                        landscape of digital innovation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* <div
+                            className="ln-about-wrapper wow fadeInUp"
+                            data-wow-delay=".2s"
+                        >
+                            <div className="ln-about-content-wrapper"> */}
+                        {/* <div className="ln-about-content"> */}
+                        {/* <div className="ln-about-content">
+                            <span className="tag">About Us</span> */}
+                        <h4>Welcome to LN Sols!</h4>
+                        <p>
+                            At LN Sols, we are passionate about driving digital
+                            transformation through innovative software
+                            solutions. As a dynamic startup founded just six
+                            months ago, our mission is to empower businesses by
+                            delivering top-tier web and mobile applications,
+                            cutting-edge cloud services, and insightful data
+                            analytics. Our vision is to become a trusted partner
+                            in the technology space, known for our commitment to
+                            excellence and customer satisfaction.
+                        </p>
+                        <h4>What We Do</h4>
+                        <p>
+                            We specialize in crafting tailored software
+                            solutions to meet the unique needs of businesses.
+                            From developing robust web and mobile applications
+                            to providing scalable cloud services and
+                            comprehensive data analytics, our goal is to help
+                            you harness the full potential of technology. At LN
+                            Sols, we are dedicated to creating solutions that
+                            not only meet but exceed your expectations.
+                        </p>
+                        <h4>Why Choose Us ?</h4>
+                        <p>
+                            We understand that maintaining and evolving
+                            technology is key to business success. That’s why we
+                            offer an exclusive promotion: enjoy 3-6 months of
+                            free maintenance services when you partner with us.
+                            Our dedicated team ensures that your solutions
+                            remain at peak performance, giving you peace of mind
+                            as you focus on what matters most—growing your
+                            business.
+                        </p>
+                        <h4>Our Culture</h4>
+                        <p>
+                            At LN Sols, we believe in a friendly and inclusive
+                            culture that encourages creativity and
+                            collaboration. We strive to create an environment
+                            where ideas can flourish, and every team member
+                            feels empowered to contribute their best. Our open
+                            and approachable atmosphere ensures that we work
+                            together seamlessly to achieve shared goals and
+                            deliver exceptional results.
+                        </p>
+                        <h4>Join Us on Our Journey</h4>
+                        <p>
+                            As a startup, we are excited about the future and
+                            the opportunities that lie ahead. We are committed
+                            to building long-lasting relationships with our
+                            clients and growing alongside them. Whether you need
+                            a cutting-edge application, reliable cloud services,
+                            or actionable insights through data analytics, LN
+                            Sols is here to help you succeed.
+                        </p>
+                        <p>
+                            Thank you for considering LN Sols. We look forward
+                            to the possibility of working together and making a
+                            positive impact on your business.
+                        </p>
+                    </div>
+                    {/* </div> */}
+                    {/* <div className="ln-about-image">
+                                <img src={aboutImage} alt="about-image" />
+                            </div> */}
+                    {/* </div> */}
+                    {/* </div> */}
+                </section>
+                {/* ====== About End ====== */}
+                {/* ====== Pricing Start ====== */}
+                {/* <section id="pricing" className="ln-pricing">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="ln-section-title mx-auto text-center">
                                     <span>Pricing</span>
                                     <h2>Our Pricing Plans</h2>
                                     <p>
@@ -336,14 +415,14 @@ class Home extends Component {
                         <div className="row g-0 align-items-center justify-content-center">
                             <div className="col-lg-4 col-md-6 col-sm-10">
                                 <div
-                                    className="ud-single-pricing first-item wow fadeInUp"
+                                    className="ln-single-pricing first-item wow fadeInUp"
                                     data-wow-delay=".15s"
                                 >
-                                    <div className="ud-pricing-header">
+                                    <div className="ln-pricing-header">
                                         <h3>STARTING FROM</h3>
                                         <h4>$ 19.99/mo</h4>
                                     </div>
-                                    <div className="ud-pricing-body">
+                                    <div className="ln-pricing-body">
                                         <ul>
                                             <li>5 User</li>
                                             <li>All UI components</li>
@@ -353,10 +432,10 @@ class Home extends Component {
                                             <li>4 Months support</li>
                                         </ul>
                                     </div>
-                                    <div className="ud-pricing-footer">
+                                    <div className="ln-pricing-footer">
                                         <a
                                             href="javascript:void(0)"
-                                            className="ud-main-btn ud-border-btn"
+                                            className="ln-main-btn ln-border-btn"
                                         >
                                             Purchase Now
                                         </a>
@@ -365,17 +444,17 @@ class Home extends Component {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-10">
                                 <div
-                                    className="ud-single-pricing active wow fadeInUp"
+                                    className="ln-single-pricing active wow fadeInUp"
                                     data-wow-delay=".1s"
                                 >
-                                    <span className="ud-popular-tag">
+                                    <span className="ln-popular-tag">
                                         POPULAR
                                     </span>
-                                    <div className="ud-pricing-header">
+                                    <div className="ln-pricing-header">
                                         <h3>STARTING FROM</h3>
                                         <h4>$ 30.99/mo</h4>
                                     </div>
-                                    <div className="ud-pricing-body">
+                                    <div className="ln-pricing-body">
                                         <ul>
                                             <li>5 User</li>
                                             <li>All UI components</li>
@@ -385,10 +464,10 @@ class Home extends Component {
                                             <li>4 Months support</li>
                                         </ul>
                                     </div>
-                                    <div className="ud-pricing-footer">
+                                    <div className="ln-pricing-footer">
                                         <a
                                             href="javascript:void(0)"
-                                            className="ud-main-btn ud-white-btn"
+                                            className="ln-main-btn ln-white-btn"
                                         >
                                             Purchase Now
                                         </a>
@@ -397,14 +476,14 @@ class Home extends Component {
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-10">
                                 <div
-                                    className="ud-single-pricing last-item wow fadeInUp"
+                                    className="ln-single-pricing last-item wow fadeInUp"
                                     data-wow-delay=".15s"
                                 >
-                                    <div className="ud-pricing-header">
+                                    <div className="ln-pricing-header">
                                         <h3>STARTING FROM</h3>
                                         <h4>$ 70.99/mo</h4>
                                     </div>
-                                    <div className="ud-pricing-body">
+                                    <div className="ln-pricing-body">
                                         <ul>
                                             <li>5 User</li>
                                             <li>All UI components</li>
@@ -414,10 +493,10 @@ class Home extends Component {
                                             <li>4 Months support</li>
                                         </ul>
                                     </div>
-                                    <div className="ud-pricing-footer">
+                                    <div className="ln-pricing-footer">
                                         <a
                                             href="javascript:void(0)"
-                                            className="ud-main-btn ud-border-btn"
+                                            className="ln-main-btn ln-border-btn"
                                         >
                                             Purchase Now
                                         </a>
@@ -429,7 +508,7 @@ class Home extends Component {
                 </section> */}
                 {/* ====== Pricing End ====== */}
                 {/* ====== FAQ Start ====== */}
-                {/* <section id="faq" className="ud-faq">
+                {/* <section id="faq" className="ln-faq">
                     <div className="shape">
                         <img
                             src="../../assets/images/faq/shape.svg"
@@ -439,7 +518,7 @@ class Home extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="ud-section-title text-center mx-auto">
+                                <div className="ln-section-title text-center mx-auto">
                                     <span>FAQ</span>
                                     <h2>Any Questions? Answered</h2>
                                     <p>
@@ -453,12 +532,12 @@ class Home extends Component {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div
-                                    className="ud-single-faq wow fadeInUp"
+                                    className="ln-single-faq wow fadeInUp"
                                     data-wow-delay=".1s"
                                 >
                                     <div className="accordion">
                                         <button
-                                            className="ud-faq-btn collapsed"
+                                            className="ln-faq-btn collapsed"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne"
                                         >
@@ -471,7 +550,7 @@ class Home extends Component {
                                             id="collapseOne"
                                             className="accordion-collapse collapse"
                                         >
-                                            <div className="ud-faq-body">
+                                            <div className="ln-faq-body">
                                                 Lorem Ipsum is simply dummy text
                                                 of the printing and typesetting
                                                 industry. Lorem Ipsum has been
@@ -485,12 +564,12 @@ class Home extends Component {
                                     </div>
                                 </div>
                                 <div
-                                    className="ud-single-faq wow fadeInUp"
+                                    className="ln-single-faq wow fadeInUp"
                                     data-wow-delay=".15s"
                                 >
                                     <div className="accordion">
                                         <button
-                                            className="ud-faq-btn collapsed"
+                                            className="ln-faq-btn collapsed"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo"
                                         >
@@ -506,7 +585,7 @@ class Home extends Component {
                                             id="collapseTwo"
                                             className="accordion-collapse collapse"
                                         >
-                                            <div className="ud-faq-body">
+                                            <div className="ln-faq-body">
                                                 Lorem Ipsum is simply dummy text
                                                 of the printing and typesetting
                                                 industry. Lorem Ipsum has been
@@ -520,12 +599,12 @@ class Home extends Component {
                                     </div>
                                 </div>
                                 <div
-                                    className="ud-single-faq wow fadeInUp"
+                                    className="ln-single-faq wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
                                     <div className="accordion">
                                         <button
-                                            className="ud-faq-btn collapsed"
+                                            className="ln-faq-btn collapsed"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree"
                                         >
@@ -540,7 +619,7 @@ class Home extends Component {
                                             id="collapseThree"
                                             className="accordion-collapse collapse"
                                         >
-                                            <div className="ud-faq-body">
+                                            <div className="ln-faq-body">
                                                 Lorem Ipsum is simply dummy text
                                                 of the printing and typesetting
                                                 industry. Lorem Ipsum has been
@@ -556,12 +635,12 @@ class Home extends Component {
                             </div>
                             <div className="col-lg-6">
                                 <div
-                                    className="ud-single-faq wow fadeInUp"
+                                    className="ln-single-faq wow fadeInUp"
                                     data-wow-delay=".1s"
                                 >
                                     <div className="accordion">
                                         <button
-                                            className="ud-faq-btn collapsed"
+                                            className="ln-faq-btn collapsed"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#collapseFour"
                                         >
@@ -577,7 +656,7 @@ class Home extends Component {
                                             id="collapseFour"
                                             className="accordion-collapse collapse"
                                         >
-                                            <div className="ud-faq-body">
+                                            <div className="ln-faq-body">
                                                 Lorem Ipsum is simply dummy text
                                                 of the printing and typesetting
                                                 industry. Lorem Ipsum has been
@@ -591,12 +670,12 @@ class Home extends Component {
                                     </div>
                                 </div>
                                 <div
-                                    className="ud-single-faq wow fadeInUp"
+                                    className="ln-single-faq wow fadeInUp"
                                     data-wow-delay=".15s"
                                 >
                                     <div className="accordion">
                                         <button
-                                            className="ud-faq-btn collapsed"
+                                            className="ln-faq-btn collapsed"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#collapseFive"
                                         >
@@ -612,7 +691,7 @@ class Home extends Component {
                                             id="collapseFive"
                                             className="accordion-collapse collapse"
                                         >
-                                            <div className="ud-faq-body">
+                                            <div className="ln-faq-body">
                                                 Lorem Ipsum is simply dummy text
                                                 of the printing and typesetting
                                                 industry. Lorem Ipsum has been
@@ -626,12 +705,12 @@ class Home extends Component {
                                     </div>
                                 </div>
                                 <div
-                                    className="ud-single-faq wow fadeInUp"
+                                    className="ln-single-faq wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
                                     <div className="accordion">
                                         <button
-                                            className="ud-faq-btn collapsed"
+                                            className="ln-faq-btn collapsed"
                                             data-bs-toggle="collapse"
                                             data-bs-target="#collapseSix"
                                         >
@@ -647,7 +726,7 @@ class Home extends Component {
                                             id="collapseSix"
                                             className="accordion-collapse collapse"
                                         >
-                                            <div className="ud-faq-body">
+                                            <div className="ln-faq-body">
                                                 Lorem Ipsum is simply dummy text
                                                 of the printing and typesetting
                                                 industry. Lorem Ipsum has been
@@ -667,11 +746,11 @@ class Home extends Component {
                 {/* ====== FAQ End ====== */}
                 <Testimonials />
                 {/* ====== Team Start ====== */}
-                {/* <section id="team" className="ud-team">
+                {/* <section id="team" className="ln-team">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="ud-section-title mx-auto text-center">
+                                <div className="ln-section-title mx-auto text-center">
                                     <span>Our Team</span>
                                     <h2>Meet The Team</h2>
                                     <p>
@@ -685,11 +764,11 @@ class Home extends Component {
                         <div className="row">
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-team wow fadeInUp"
+                                    className="ln-single-team wow fadeInUp"
                                     data-wow-delay=".1s"
                                 >
-                                    <div className="ud-team-image-wrapper">
-                                        <div className="ud-team-image">
+                                    <div className="ln-team-image-wrapper">
+                                        <div className="ln-team-image">
                                             <img
                                                 src="../../assets/images/team/team-01.png"
                                                 alt="team"
@@ -706,11 +785,11 @@ class Home extends Component {
                                             className="shape shape-2"
                                         />
                                     </div>
-                                    <div className="ud-team-info">
+                                    <div className="ln-team-info">
                                         <h5>Adveen Desuza</h5>
                                         <h6>UI Designer</h6>
                                     </div>
-                                    <ul className="ud-team-socials">
+                                    <ul className="ln-team-socials">
                                         <li>
                                             <a href="https://twitter.com/MusharofChy">
                                                 <i className="lni lni-facebook-filled" />
@@ -731,11 +810,11 @@ class Home extends Component {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-team wow fadeInUp"
+                                    className="ln-single-team wow fadeInUp"
                                     data-wow-delay=".15s"
                                 >
-                                    <div className="ud-team-image-wrapper">
-                                        <div className="ud-team-image">
+                                    <div className="ln-team-image-wrapper">
+                                        <div className="ln-team-image">
                                             <img
                                                 src="../../assets/images/team/team-02.png"
                                                 alt="team"
@@ -752,11 +831,11 @@ class Home extends Component {
                                             className="shape shape-2"
                                         />
                                     </div>
-                                    <div className="ud-team-info">
+                                    <div className="ln-team-info">
                                         <h5>Jezmin uniya</h5>
                                         <h6>Product Designer</h6>
                                     </div>
-                                    <ul className="ud-team-socials">
+                                    <ul className="ln-team-socials">
                                         <li>
                                             <a href="https://twitter.com/MusharofChy">
                                                 <i className="lni lni-facebook-filled" />
@@ -777,11 +856,11 @@ class Home extends Component {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-team wow fadeInUp"
+                                    className="ln-single-team wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
-                                    <div className="ud-team-image-wrapper">
-                                        <div className="ud-team-image">
+                                    <div className="ln-team-image-wrapper">
+                                        <div className="ln-team-image">
                                             <img
                                                 src="../../assets/images/team/team-03.png"
                                                 alt="team"
@@ -798,11 +877,11 @@ class Home extends Component {
                                             className="shape shape-2"
                                         />
                                     </div>
-                                    <div className="ud-team-info">
+                                    <div className="ln-team-info">
                                         <h5>Andrieo Gloree</h5>
                                         <h6>App Developer</h6>
                                     </div>
-                                    <ul className="ud-team-socials">
+                                    <ul className="ln-team-socials">
                                         <li>
                                             <a href="https://twitter.com/MusharofChy">
                                                 <i className="lni lni-facebook-filled" />
@@ -823,11 +902,11 @@ class Home extends Component {
                             </div>
                             <div className="col-xl-3 col-lg-3 col-sm-6">
                                 <div
-                                    className="ud-single-team wow fadeInUp"
+                                    className="ln-single-team wow fadeInUp"
                                     data-wow-delay=".25s"
                                 >
-                                    <div className="ud-team-image-wrapper">
-                                        <div className="ud-team-image">
+                                    <div className="ln-team-image-wrapper">
+                                        <div className="ln-team-image">
                                             <img
                                                 src="../../assets/images/team/team-04.png"
                                                 alt="team"
@@ -844,11 +923,11 @@ class Home extends Component {
                                             className="shape shape-2"
                                         />
                                     </div>
-                                    <div className="ud-team-info">
+                                    <div className="ln-team-info">
                                         <h5>Jackie Sanders</h5>
                                         <h6>Content Writer</h6>
                                     </div>
-                                    <ul className="ud-team-socials">
+                                    <ul className="ln-team-socials">
                                         <li>
                                             <a href="https://twitter.com/MusharofChy">
                                                 <i className="lni lni-facebook-filled" />

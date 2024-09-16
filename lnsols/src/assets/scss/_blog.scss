@@ -1,97 +1,97 @@
 /* ====== Blog CSS ====== */
 
-.ud-blog-grids {
-  padding-top: 120px;
-  padding-bottom: 80px;
+.ln-blog-grids {
+    padding-top: 120px;
+    padding-bottom: 80px;
 
-  &.ud-related-articles {
-    padding-top: 100px;
-  }
+    &.ln-related-articles {
+        padding-top: 100px;
+    }
 
-  @media #{$xs} {
-    padding-top: 80px;
-    padding-bottom: 40px;
-  }
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
 }
 
-.ud-single-blog {
-  margin-bottom: 40px;
+.ln-single-blog {
+    margin-bottom: 40px;
 
-  &:hover {
-    .ud-blog-image {
-      img {
-        @include transform(scale(1.1) rotate(3deg));
-      }
-    }
-  }
-
-  .ud-blog-image {
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 30px;
-
-    a {
-      display: block;
+    &:hover {
+        .ln-blog-image {
+            img {
+                @include transform(scale(1.1) rotate(3deg));
+            }
+        }
     }
 
-    img {
-      width: 100%;
-      @include transition(0.3s);
-    }
-  }
+    .ln-blog-image {
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 30px;
 
-  .ud-blog-date {
-    display: inline-flex;
-    font-size: 12px;
+        a {
+            display: block;
+        }
 
-    font-weight: 600;
-    padding: 8px 16px;
-    background: var(--primary-color);
-    color: var(--white);
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-
-  .ud-blog-title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 15px;
-
-    @media #{$lg} {
-      font-size: 20px;
-      line-height: 28px;
+        img {
+            width: 100%;
+            @include transition(0.3s);
+        }
     }
 
-    a {
-      color: inherit;
+    .ln-blog-date {
+        display: inline-flex;
+        font-size: 12px;
 
-      &:hover {
-        color: var(--primary-color);
-      }
+        font-weight: 600;
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: var(--white);
+        border-radius: 5px;
+        margin-bottom: 20px;
     }
-  }
 
-  .ud-blog-desc {
-    font-size: 16px;
-    line-height: 28px;
-  }
+    .ln-blog-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 15px;
+
+        @media #{$lg} {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .ln-blog-desc {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
 
-.ud-related-articles-title {
-  font-weight: 800;
-  font-size: 28px;
-  padding-bottom: 25px;
-  position: relative;
-  margin-bottom: 50px;
+.ln-related-articles-title {
+    font-weight: 800;
+    font-size: 28px;
+    padding-bottom: 25px;
+    position: relative;
+    margin-bottom: 50px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 80px;
-    height: 2px;
-    background: var(--primary-color);
-    left: 0;
-    bottom: 0;
-  }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        background: var(--primary-color);
+        left: 0;
+        bottom: 0;
+    }
 }

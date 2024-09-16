@@ -58,18 +58,18 @@ const WebDevelopment = () => {
                 href="../../assets/images/favicon.svg"
                 type="image/svg"
             />
-            <section className="ud-hero" id="home">
+            <section className="ln-hero" id="home">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div
-                                className="ud-hero-content wow fadeInUp"
+                                className="ln-hero-content wow fadeInUp"
                                 data-wow-delay=".2s"
                             >
-                                <h1 className="ud-hero-title">
+                                <h1 className="ln-hero-title">
                                     Unlock Your Potential
                                 </h1>
-                                <p className="ud-hero-desc">
+                                <p className="ln-hero-desc">
                                     Transform your digital footprint with Our
                                     Expert Web Development Services. Explore
                                     boundless opportunities as we craft bespoke
@@ -91,14 +91,14 @@ const WebDevelopment = () => {
             </section>
             {/* ====== Hero End ====== */}
 
-            <section id="about" className="ud-about">
+            <section id="about" className="ln-about">
                 <div className="container">
                     <div
-                        className="ud-about-wrapper wow fadeInUp"
+                        className="ln-about-wrapper wow fadeInUp"
                         data-wow-delay=".2s"
                     >
-                        <div className="ud-about-content-wrapper">
-                            <div className="ud-about-content">
+                        <div className="ln-about-content-wrapper">
+                            <div className="ln-about-content">
                                 <span className="tag">About Us</span>
                                 <h2>
                                     Brilliant Toolkit to Build Nextgen Website
@@ -119,13 +119,13 @@ const WebDevelopment = () => {
                                 </p>
                                 <a
                                     href="javascript:void(0)"
-                                    className="ud-main-btn"
+                                    className="ln-main-btn"
                                 >
                                     Learn More
                                 </a>
                             </div>
                         </div>
-                        <div className="ud-about-image">
+                        <div className="ln-about-image">
                             <img src={aboutImage} alt="about-image" />
                         </div>
                     </div>

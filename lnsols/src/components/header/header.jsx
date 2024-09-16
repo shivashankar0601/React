@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./header.css";
 // import logo from "./../../assets/logo.jpg";
-import logo from "../../assets/images/logo/logo.svg";
+// import logo from "../../assets/images/logo/logo.svg";
 import WOW from "wowjs";
 
 // Header component
@@ -47,7 +47,7 @@ class Header extends Component {
         let navbarToggler = document.querySelector(".navbar-toggler");
         const navbarCollapse = document.querySelector(".navbar-collapse");
 
-        document.querySelectorAll(".ud-menu-scroll").forEach((e) =>
+        document.querySelectorAll(".ln-menu-scroll").forEach((e) =>
             e.addEventListener("click", () => {
                 navbarToggler.classList.remove("active");
                 navbarCollapse.classList.remove("show");
@@ -63,7 +63,7 @@ class Header extends Component {
         );
         submenuButton.forEach((elem) => {
             elem.querySelector("a").addEventListener("click", () => {
-                elem.querySelector(".ud-submenu").classList.toggle("show");
+                elem.querySelector(".ln-submenu").classList.toggle("show");
             });
         });
     }
@@ -76,8 +76,12 @@ class Header extends Component {
     }
     // NavbarBrand component
     NavbarBrand = () => (
-        <a className="navbar-brand" href="/">
-            <img src={logo} alt="Logo" />
+        <a className="navbar-brand brand-logo" href="/">
+            {/* <img src={logo} alt="Logo" /> */}
+            LN Sols
+            <div className="brand-logo-tag-name">
+                Empowering future solutions
+            </div>
         </a>
     );
 
@@ -94,66 +98,66 @@ class Header extends Component {
     NavMenu = () => (
         <div className="w-100">
             <ul id="nav" className=" trapezoid navbar-nav float-end">
-                <li className="nav-item">
-                    <a className="ud-menu-scroll" href="#home">
+                <li className="nav-item mx-3">
+                    <a className="ln-menu-scroll" href="#home">
                         Home
                     </a>
                 </li>
-                <li className="nav-item">
-                    <a className="ud-menu-scroll" href="#services">
+                <li className="nav-item mx-3">
+                    <a className="ln-menu-scroll" href="#services">
                         Services
                     </a>
                 </li>
-                <li className="nav-item">
-                    <a className="ud-menu-scroll" href="#about">
+                <li className="nav-item mx-3">
+                    <a className="ln-menu-scroll" href="#about">
                         About
                     </a>
                 </li>
                 {/* <li className="nav-item">
-            <a className="ud-menu-scroll" href="#team">
+            <a className="ln-menu-scroll" href="#team">
                 Team
             </a>
         </li> */}
-                <li className="nav-item">
-                    <a className="ud-menu-scroll" href="#contact">
+                <li className="nav-item mx-3">
+                    <a className="ln-menu-scroll" href="#contact">
                         Contact
                     </a>
                 </li>
                 {/* <li className="nav-item nav-item-has-children">
             <a href="javascript:void(0)"> Pages </a>
-            <ul className="ud-submenu">
-                <li className="ud-submenu-item">
-                    <a href="about.html" className="ud-submenu-link">
+            <ul className="ln-submenu">
+                <li className="ln-submenu-item">
+                    <a href="about.html" className="ln-submenu-link">
                         About Page
                     </a>
                 </li>
-                <li className="ud-submenu-item">
-                    <a href="pricing.html" className="ud-submenu-link">
+                <li className="ln-submenu-item">
+                    <a href="pricing.html" className="ln-submenu-link">
                         Pricing Page
                     </a>
                 </li>
-                <li className="ud-submenu-item">
-                    <a href="contact.html" className="ud-submenu-link">
+                <li className="ln-submenu-item">
+                    <a href="contact.html" className="ln-submenu-link">
                         Contact Page
                     </a>
                 </li>
-                <li className="ud-submenu-item">
-                    <a href="blog.html" className="ud-submenu-link">
+                <li className="ln-submenu-item">
+                    <a href="blog.html" className="ln-submenu-link">
                         Blog Grid Page
                     </a>
                 </li>
-                <li className="ud-submenu-item">
-                    <a href="blog-details.html" className="ud-submenu-link">
+                <li className="ln-submenu-item">
+                    <a href="blog-details.html" className="ln-submenu-link">
                         Blog Details Page
                     </a>
                 </li>
-                <li className="ud-submenu-item">
-                    <a href="login.html" className="ud-submenu-link">
+                <li className="ln-submenu-item">
+                    <a href="login.html" className="ln-submenu-link">
                         Sign In Page
                     </a>
                 </li>
-                <li className="ud-submenu-item">
-                    <a href="404.html" className="ud-submenu-link">
+                <li className="ln-submenu-item">
+                    <a href="404.html" className="ln-submenu-link">
                         404 Page
                     </a>
                 </li>
@@ -166,10 +170,10 @@ class Header extends Component {
     // NavbarButtons component
     // NavbarButtons = () => (
     //     <div className="navbar-btn d-none d-sm-inline-block">
-    //         <a href="login.html" className="ud-main-btn ud-login-btn">
+    //         <a href="login.html" className="ln-main-btn ln-login-btn">
     //             Sign In
     //         </a>
-    //         <a className="ud-main-btn ud-white-btn" href="javascript:void(0)">
+    //         <a className="ln-main-btn ln-white-btn" href="javascript:void(0)">
     //             Sign Up
     //         </a>
     //     </div>
@@ -177,7 +181,7 @@ class Header extends Component {
 
     render() {
         return (
-            <header className="ud-header">
+            <header className="ln-header">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

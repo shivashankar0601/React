@@ -7,7 +7,7 @@ const Footer = () => {
         // 		<span>© 2024 company name</span>
         // 	</div>
         // </footer>
-        <footer className="ud-footer wow fadeInUp" data-wow-delay=".15s">
+        <footer className="ln-footer wow fadeInUp" data-wow-delay=".15s">
             <div className="shape shape-1">
                 <img src="../../assets/images/footer/shape-1.svg" alt="shape" />
             </div>
@@ -17,22 +17,22 @@ const Footer = () => {
             <div className="shape shape-3">
                 <img src="../../assets/images/footer/shape-3.svg" alt="shape" />
             </div>
-            <div className="ud-footer-widgets">
+            <div className="ln-footer-widgets">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-6">
-                            <div className="ud-widget">
-                                <a href="index.html" className="ud-footer-logo">
+                            <div className="ln-widget">
+                                <a href="index.html" className="ln-footer-logo">
                                     <img
                                         src="../../assets/images/logo/logo.svg"
                                         alt="logo"
                                     />
                                 </a>
-                                <p className="ud-widget-desc">
+                                <p className="ln-widget-desc">
                                     We create digital experiences for brands and
                                     companies by using technology.
                                 </p>
-                                <ul className="ud-widget-socials">
+                                <ul className="ln-widget-socials">
                                     <li>
                                         <a href="https://twitter.com/MusharofChy">
                                             <i className="lni lni-facebook-filled" />
@@ -57,9 +57,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                            <div className="ud-widget">
-                                <h5 className="ud-widget-title">About Us</h5>
-                                <ul className="ud-widget-links">
+                            <div className="ln-widget">
+                                <h5 className="ln-widget-title">About Us</h5>
+                                <ul className="ln-widget-links">
                                     <li>
                                         <a href="javascript:void(0)">Home</a>
                                     </li>
@@ -79,10 +79,10 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        {/* <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
-                            <div className="ud-widget">
-                                <h5 className="ud-widget-title">Features</h5>
-                                <ul className="ud-widget-links">
+                        <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                            <div className="ln-widget">
+                                <h5 className="ln-widget-title">Features</h5>
+                                <ul className="ln-widget-links">
                                     <li>
                                         <a href="javascript:void(0)">
                                             How it works
@@ -107,11 +107,11 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
-                            <div className="ud-widget">
-                                <h5 className="ud-widget-title">
+                            <div className="ln-widget">
+                                <h5 className="ln-widget-title">
                                     Our Products
                                 </h5>
-                                <ul className="ud-widget-links">
+                                <ul className="ln-widget-links">
                                     <li>
                                         <a
                                             href="https://lineicons.com/"
@@ -152,9 +152,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-md-8 col-sm-10">
-                            <div className="ud-widget">
-                                <h5 className="ud-widget-title">Partners</h5>
-                                <ul className="ud-widget-brands">
+                            <div className="ln-widget">
+                                <h5 className="ln-widget-title">Partners</h5>
+                                <ul className="ln-widget-brands">
                                     <li>
                                         <a
                                             href="https://ayroui.com/"
@@ -229,15 +229,15 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="ud-footer-bottom">
+            <div className="ln-footer-bottom">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
-                            <ul className="ud-footer-bottom-left">
+                            <ul className="ln-footer-bottom-left">
                                 <li>
                                     <a href="javascript:void(0)">
                                         Privacy policy
@@ -256,7 +256,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-md-4">
-                            <p className="ud-footer-bottom-right">
+                            <p className="ln-footer-bottom-right">
                                 © 2024{" "}
                                 <a href="https://lnsols.com" rel="nofollow">
                                     LN Sols

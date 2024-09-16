@@ -12,8 +12,8 @@ import ContactUs from "./components/contact/contact-us";
 import NotFound from "./components/not-found/not-found";
 import { Component } from "react";
 // import WOW from "wowjs";
-import logoTwo from "./assets/images/logo/logo-2.svg";
-import logo from "./assets/images/logo/logo.svg";
+// import logoTwo from "./assets/images/logo/logo-2.svg";
+// import logo from "./assets/images/logo/logo.svg";
 import MobileApps from "./components/services-offered/mobile-apps";
 import WebDevelopment from "./components/services-offered/web-development";
 import CloudServices from "./components/services-offered/cloud";
@@ -75,9 +75,10 @@ class App extends Component {
     }
 
     handleScroll(event) {
-        const ud_header = document.querySelector(".ud-header");
+        const ud_header = document.querySelector(".ln-header");
         const sticky = ud_header.offsetTop;
-        const logoImage = document.querySelector(".navbar-brand img");
+        // const logoImage = document.querySelector(".navbar-brand img");
+        const logo = document.querySelector(".brand-logo");
 
         if (window.pageYOffset > sticky) {
             ud_header.classList.add("sticky");
@@ -85,10 +86,16 @@ class App extends Component {
             ud_header.classList.remove("sticky");
         }
         // === logo change
+        // if (ud_header.classList.contains("sticky")) {
+        //     logoImage.src = logoTwo;
+        // } else {
+        //     logoImage.src = logo;
+        // }
+
         if (ud_header.classList.contains("sticky")) {
-            logoImage.src = logoTwo;
+            logo.classList.add("heading-color");
         } else {
-            logoImage.src = logo;
+            logo.classList.remove("heading-color");
         }
 
         // show or hide the back-top-top button
