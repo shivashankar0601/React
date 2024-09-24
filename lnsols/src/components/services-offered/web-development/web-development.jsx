@@ -1,7 +1,7 @@
-import React from "react";
-import aboutImage from "../../assets/images/about/about-image.svg";
-import Testimonials from "../testimonials/testimonials";
-import Contact from "../common/contact";
+import aboutImage from "assets/images/about/about-image.svg";
+import Contact from "components/common/contact";
+import Testimonials from "components/testimonials/testimonials";
+import "./web-development.css";
 
 const WebDevelopment = () => {
     return (
@@ -134,12 +134,6 @@ const WebDevelopment = () => {
 
             <Testimonials />
             <Contact />
-
-            {/* ====== Back To Top Start ====== */}
-            <a href="javascript:void(0)" className="back-to-top">
-                <i className="lni lni-chevron-up"> </i>
-            </a>
-            {/* ====== Back To Top End ====== */}
         </div>
     );
 };

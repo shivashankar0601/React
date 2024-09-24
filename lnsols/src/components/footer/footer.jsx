@@ -1,36 +1,22 @@
-import React from "react";
-
 const Footer = () => {
     return (
-        // <footer className=" py-3 bg-dark text-white text-center">
-        // 	<div className="container" bis_skin_checked="1">
-        // 		<span>© 2024 company name</span>
-        // 	</div>
-        // </footer>
         <footer className="ln-footer wow fadeInUp" data-wow-delay=".15s">
-            <div className="shape shape-1">
-                <img src="../../assets/images/footer/shape-1.svg" alt="shape" />
-            </div>
-            <div className="shape shape-2">
-                <img src="../../assets/images/footer/shape-2.svg" alt="shape" />
-            </div>
-            <div className="shape shape-3">
-                <img src="../../assets/images/footer/shape-3.svg" alt="shape" />
-            </div>
             <div className="ln-footer-widgets">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-3 col-lg-4 col-md-6">
+                        {/* <div className="col-xl-3 col-lg-4 col-md-6"> */}
+                        <div className="col">
                             <div className="ln-widget">
-                                <a href="index.html" className="ln-footer-logo">
-                                    <img
-                                        src="../../assets/images/logo/logo.svg"
-                                        alt="logo"
-                                    />
+                                <a className="ln-footer-logo" href="/">
+                                    {/* <img src={logo} alt="Logo" /> */}
+                                    LN Sols
+                                    <div className="brand-logo-tag-name">
+                                        Empowering future solutions
+                                    </div>
                                 </a>
                                 <p className="ln-widget-desc">
-                                    We create digital experiences for brands and
-                                    companies by using technology.
+                                    We transform your Business with our
+                                    customized tech solutions.
                                 </p>
                                 <ul className="ln-widget-socials">
                                     <li>
@@ -56,7 +42,8 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        {/* <div className="col-xl-2 col-lg-2 col-md-6 col-sm-6"> */}
+                        <div className="col">
                             <div className="ln-widget">
                                 <h5 className="ln-widget-title">About Us</h5>
                                 <ul className="ln-widget-links">
@@ -64,49 +51,50 @@ const Footer = () => {
                                         <a href="javascript:void(0)">Home</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)">
-                                            Services offered
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="javascript:void(0)">About</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
-                                            Testimonial
+                                            Testimonials
                                         </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Contact</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                        {/* <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6"> */}
+                        <div className="col">
                             <div className="ln-widget">
-                                <h5 className="ln-widget-title">Features</h5>
+                                <h5 className="ln-widget-title">
+                                    Services offered
+                                </h5>
                                 <ul className="ln-widget-links">
                                     <li>
                                         <a href="javascript:void(0)">
-                                            How it works
+                                            Web development
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
-                                            Privacy policy
+                                            Cloud services
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
-                                            Terms of service
+                                            Mobile app development
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
-                                            Refund policy
+                                            Data analytics
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                        {/* <div className="col-xl-2 col-lg-3 col-md-6 col-sm-6">
                             <div className="ln-widget">
                                 <h5 className="ln-widget-title">
                                     Our Products
@@ -229,7 +217,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -239,9 +227,7 @@ const Footer = () => {
                         <div className="col-md-8">
                             <ul className="ln-footer-bottom-left">
                                 <li>
-                                    <a href="javascript:void(0)">
-                                        Privacy policy
-                                    </a>
+                                    <a href="/privacy-policy">Privacy policy</a>
                                 </li>
                                 <li>
                                     <a href="javascript:void(0)">

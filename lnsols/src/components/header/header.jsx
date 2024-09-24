@@ -1,49 +1,11 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import "./header.css";
 // import logo from "./../../assets/logo.jpg";
 // import logo from "../../assets/images/logo/logo.svg";
-import WOW from "wowjs";
 
 // Header component
 class Header extends Component {
-    scrollTo(element, to = 0, duration = 500) {
-        const start = element.scrollTop;
-        const change = to - start;
-        const increment = 20;
-        let currentTime = 0;
-
-        const animateScroll = () => {
-            currentTime += increment;
-
-            const val = this.easeInOutQuad(
-                currentTime,
-                start,
-                change,
-                duration
-            );
-
-            element.scrollTop = val;
-
-            if (currentTime < duration) {
-                setTimeout(animateScroll, increment);
-            }
-        };
-
-        animateScroll();
-    }
-
     componentDidMount() {
-        new WOW.WOW({
-            live: false,
-        }).init();
-
-        let backToTop = document.querySelector(".back-to-top");
-        if (backToTop) {
-            backToTop.onclick = () => {
-                this.scrollTo(document.documentElement);
-            };
-        }
-
         let navbarToggler = document.querySelector(".navbar-toggler");
         const navbarCollapse = document.querySelector(".navbar-collapse");
 
@@ -68,12 +30,6 @@ class Header extends Component {
         });
     }
 
-    easeInOutQuad(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-    }
     // NavbarBrand component
     NavbarBrand = () => (
         <a className="navbar-brand brand-logo" href="/">
@@ -104,12 +60,12 @@ class Header extends Component {
                     </a>
                 </li>
                 <li className="nav-item mx-3">
-                    <a className="ln-menu-scroll" href="#services">
+                    <a className="ln-menu-scroll" href="/#services">
                         Services
                     </a>
                 </li>
                 <li className="nav-item mx-3">
-                    <a className="ln-menu-scroll" href="#about">
+                    <a className="ln-menu-scroll" href="/#about">
                         About
                     </a>
                 </li>

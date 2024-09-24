@@ -1,23 +1,21 @@
-import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import * as icons from "@fortawesome/free-solid-svg-icons";
-import { isObject, isNull } from "lodash";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import Home from "./components/home/home";
-import Blog from "./components/blog/blog";
-import About from "./components/about/about";
-import ContactUs from "./components/contact/contact-us";
-import NotFound from "./components/not-found/not-found";
+import Loading from "components/utils/loading/loading";
+import { isNull, isObject } from "lodash";
 import { Component } from "react";
-// import WOW from "wowjs";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/footer/footer";
+import Header from "./components/header/header";
+
+import WOW from "wowjs";
 // import logoTwo from "./assets/images/logo/logo-2.svg";
 // import logo from "./assets/images/logo/logo.svg";
-import MobileApps from "./components/services-offered/mobile-apps";
-import WebDevelopment from "./components/services-offered/web-development";
-import CloudServices from "./components/services-offered/cloud";
-import DataAnalytics from "./components/services-offered/data-analytics";
+
+import routes from "components/routing/routes";
+
+import { Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
 library.add(
     ...Object.keys(icons)
@@ -67,12 +65,57 @@ class App extends Component {
     // ];
 
     componentDidMount() {
+        new WOW.WOW({
+            live: false,
+        }).init();
+
         window.addEventListener("scroll", this.handleScroll);
+        let backToTop = document.querySelector(".back-to-top");
+        if (backToTop) {
+            backToTop.onclick = () => {
+                this.scrollTo(document.documentElement);
+            };
+        }
     }
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
     }
+
+    scrollTo(element, to = 0, duration = 500) {
+        const start = element.scrollTop;
+        const change = to - start;
+        const increment = 20;
+        let currentTime = 0;
+
+        const animateScroll = () => {
+            currentTime += increment;
+
+            const val = this.easeInOutQuad(
+                currentTime,
+                start,
+                change,
+                duration
+            );
+
+            element.scrollTop = val;
+
+            if (currentTime < duration) {
+                setTimeout(animateScroll, increment);
+            }
+        };
+
+        animateScroll();
+    }
+
+    easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    /* Start of utility methods */
 
     handleScroll(event) {
         const ud_header = document.querySelector(".ln-header");
@@ -100,6 +143,7 @@ class App extends Component {
 
         // show or hide the back-top-top button
         const backToTop = document.querySelector(".back-to-top");
+        // if (backToTop != null)
         if (
             document.body.scrollTop > 50 ||
             document.documentElement.scrollTop > 50
@@ -110,50 +154,40 @@ class App extends Component {
         }
     }
 
+    /* End of utility methods */
+
     render() {
         return (
-            <BrowserRouter>
+            <Router>
                 <div className="app">
                     <div className="header">
                         <Header />
                     </div>
                     <div className="content-wrapper">
                         <main className="main-content">
-                            <Routes>
-                                <Route path="/" exact element={<Home />} />
-                                <Route path="/blog" element={<Blog />} />
-                                <Route path="/about" element={<About />} />
-                                <Route
-                                    path="/contact"
-                                    element={<ContactUs />}
-                                />
-                                <Route
-                                    path="/mobile-apps"
-                                    element={<MobileApps />}
-                                />
-                                <Route
-                                    path="/web-development"
-                                    element={<WebDevelopment />}
-                                />
-
-                                <Route
-                                    path="/data-analytics"
-                                    element={<DataAnalytics />}
-                                />
-
-                                <Route
-                                    path="/cloud"
-                                    element={<CloudServices />}
-                                />
-                                <Route path="*" element={<NotFound />} />
-                            </Routes>
+                            <Suspense fallback={<Loading />}>
+                                <Routes>
+                                    {routes.map((route) => (
+                                        <Route
+                                            key={route.path}
+                                            path={route.path}
+                                            element={route.element}
+                                        />
+                                    ))}
+                                </Routes>
+                            </Suspense>
                         </main>
                     </div>
                     <div className="footer">
                         <Footer />
                     </div>
+                    {/* ====== Back To Top Start ====== */}
+                    <a href="javascript:void(0)" className="back-to-top">
+                        <i className="lni lni-chevron-up"> </i>
+                    </a>
+                    {/* ====== Back To Top End ====== */}
                 </div>
-            </BrowserRouter>
+            </Router>
         );
     }
 }

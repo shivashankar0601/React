@@ -1421,9 +1421,13 @@ p {
 }
 
 .ln-widget .ln-footer-logo {
-    max-width: 160px;
-    display: block;
+    /* max-width: 160px;
+    display: block; */
     margin-bottom: 10px;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 30px !important;
+    text-align: center;
 }
 
 .ln-widget .ln-footer-logo img {

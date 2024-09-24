@@ -6,7 +6,20 @@ const About = () => {
         {
             heading: "Welcome to LN Sols!",
             content: [
-                "At LN Sols, we are passionate about driving digital transformation through innovative software solutions. As a dynamic startup founded just six months ago, our mission is to empower businesses by delivering top-tier web and mobile applications, cutting-edge cloud services, and insightful data analytics. Our vision is to become a trusted partner in the technology space, known for our commitment to excellence and customer satisfaction.",
+                "At LN Sols, we are passionate about driving digital transformation through innovative software solutions. As a dynamic startup, we focus on empowering businesses by delivering top-tier web and mobile applications, advanced cloud services, and insightful data analytics. Our commitment to understanding our clients’ unique challenges allows us to provide tailored solutions and exceptional support that drive growth and efficiency.",
+                "We aim to become a trusted partner in the technology space, known for our dedication to quality, innovation, and customer satisfaction.",
+            ],
+        },
+        {
+            heading: "Our Mission",
+            content: [
+                "Our mission is to empower businesses by delivering innovative software solutions and exceptional services that drive growth and efficiency. We are committed to understanding our clients’ unique challenges and providing tailored products and expert support that exceed expectations.",
+            ],
+        },
+        {
+            heading: "Our Vision",
+            content: [
+                "Our vision is to be the leading provider of software solutions and services, recognized for our unwavering commitment to quality, innovation, and customer satisfaction. We strive to create a future where every business can harness the full potential of technology to achieve their goals and thrive in a dynamic marketplace.",
             ],
         },
         {

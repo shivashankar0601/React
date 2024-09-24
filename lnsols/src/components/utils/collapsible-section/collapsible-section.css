@@ -33,6 +33,7 @@
     max-height: 300px;
     opacity: 1;
     padding: 15px;
+    /* background-color: unset; */
 }
 
 .ln-collapsible-card:hover .ln-collapsible-heading {
@@ -42,6 +43,7 @@
 
 .ln-collapsible-card:hover {
     background-color: #ffffff;
+    /* background-color: unset !important; */
 }
 
 /* Mobile and tablet adjustments */
