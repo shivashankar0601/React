@@ -60,12 +60,12 @@ class Header extends Component {
                     </a>
                 </li>
                 <li className="nav-item mx-3">
-                    <a className="ln-menu-scroll" href="/#services">
+                    <a className="ln-menu-scroll" href="#services">
                         Services
                     </a>
                 </li>
                 <li className="nav-item mx-3">
-                    <a className="ln-menu-scroll" href="/#about">
+                    <a className="ln-menu-scroll" href="#about">
                         About
                     </a>
                 </li>
