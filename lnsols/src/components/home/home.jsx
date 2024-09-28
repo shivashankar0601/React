@@ -15,8 +15,8 @@ class Home extends Component {
     }
     render() {
         // const navigate = this.props.navigation.navigate;
-        const { navigation } = this.props;
-        console.log(navigation);
+        // const { navigation } = this.props;
+        // console.log(navigation);
         return (
             <div>
                 <meta charSet="UTF-8" />

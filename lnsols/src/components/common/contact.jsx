@@ -1,7 +1,77 @@
-import React from "react";
+import { ErrorModal, SuccessModal } from "components/utils/modals";
+import { useState } from "react";
+import { ContactService } from "services/contact-service";
 import "./contact.css";
-
 const Contact = () => {
+    // State object to hold form values
+    const [formData, setFormData] = useState({
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+        if (name === "phoneNumber") {
+            setPhoneError("");
+        }
+        // if (name === "email") {
+        //     setEmailError("");
+        // }
+    };
+
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
+    const [showErrorModal, setShowErrorModal] = useState(false);
+    const [phoneError, setPhoneError] = useState("");
+    // const [emailError, setEmailError] = useState("");
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!validatePhoneNumber(formData.phoneNumber)) {
+            setPhoneError("Please enter a valid phone number.");
+            return;
+        }
+
+        // if (!validateEmail(formData.email)) {
+        //     setEmailError("Please enter a valid email address.");
+        //     return;
+        // }
+
+        try {
+            const result = await ContactService(formData);
+            // console.log(result);
+            if (result.status == 200) {
+                setShowSuccessModal(true);
+            } else {
+                setShowErrorModal(true);
+            }
+            setFormData({
+                fullName: "",
+                email: "",
+                phoneNumber: "",
+                message: "",
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const validatePhoneNumber = (phoneNumber) => {
+        const phoneRegex = /^\+?[1-9]\d{1,14}$/; // E.164 format
+        return phoneRegex.test(phoneNumber);
+    };
+
+    // const validateEmail = (email) => {
+    //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format
+    //     return emailRegex.test(email);
+    // };
+
     return (
         <section id="contact" className="ln-contact">
             <div className="container">
@@ -55,7 +125,10 @@ const Contact = () => {
                             <h3 className="ln-contact-form-title">
                                 Reach Out to Us
                             </h3>
-                            <form className="ln-contact-form">
+                            <form
+                                className="ln-contact-form"
+                                onSubmit={handleSubmit}
+                            >
                                 <div className="ln-form-group">
                                     <label htmlFor="fullName">Full Name*</label>
                                     <input
@@ -63,6 +136,8 @@ const Contact = () => {
                                         name="fullName"
                                         placeholder="Adam Gelius"
                                         // placeholder="Samhitha G"
+                                        value={formData.fullName}
+                                        onChange={handleChange}
                                     />
                                 </div>
                                 <div className="ln-form-group">
@@ -71,15 +146,29 @@ const Contact = () => {
                                         type="email"
                                         name="email"
                                         placeholder="example@yourmail.com"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                     />
+                                    {/* {emailError && (
+                                        <div className="text-danger">
+                                            {emailError}
+                                        </div>
+                                    )} */}
                                 </div>
                                 <div className="ln-form-group">
-                                    <label htmlFor="phone">Phone*</label>
+                                    <label htmlFor="phoneNumber">Phone*</label>
                                     <input
                                         type="text"
-                                        name="phone"
+                                        name="phoneNumber"
                                         placeholder="+1 125 521 1552"
+                                        value={formData.phoneNumber}
+                                        onChange={handleChange}
                                     />
+                                    {phoneError && (
+                                        <div className="text-danger">
+                                            {phoneError}
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="ln-form-group">
                                     <label htmlFor="message">Message*</label>
@@ -87,6 +176,8 @@ const Contact = () => {
                                         name="message"
                                         rows={1}
                                         placeholder="type your message here"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                     />
                                 </div>
                                 <div className="ln-form-group mb-0">
@@ -102,6 +193,14 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <SuccessModal
+                show={showSuccessModal}
+                handleClose={() => setShowSuccessModal(false)}
+            />
+            <ErrorModal
+                show={showErrorModal}
+                handleClose={() => setShowErrorModal(false)}
+            />
         </section>
     );
 };

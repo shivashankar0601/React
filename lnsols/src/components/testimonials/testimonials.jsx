@@ -1,11 +1,10 @@
-import React from "react";
+import { isMobile } from "components/utils/device";
+import author from "../../../src/assets/images/testimonials/author-01.png";
 import Carousel from "../utils/carousel/carousel";
 import "./testimonials.css";
-import author from "../../../src/assets/images/testimonials/author-01.png";
-import { isMobile } from "components/utils/device";
 
 const Testimonials = () => {
-    console.log(isMobile() + " is mobile");
+    // console.log(isMobile() + " is mobile");
     const testimonials = [
         {
             id: 1,
@@ -97,51 +96,51 @@ const Testimonials = () => {
         //     image: author,
         //     rating: 5,
         // },
-        {
-            id: 11,
-            content:
-                "LN Sols’ web development team created a robust and user-friendly website for us, which has enhanced our online visibility and customer engagement significantly. Highly recommended!",
-            author: "Anjali Mehta",
-            position: "Founder & CEO, GreenTech Solutions",
-            image: author,
-            rating: 4.4,
-        },
-        {
-            id: 12,
-            content:
-                "Their cloud development services have streamlined our operations and reduced our costs. The team at LN Sols was knowledgeable and professional throughout the entire process.",
-            author: "Ravi Kumar",
-            position: "Chief Operations Officer, CloudReach Pvt. Ltd.",
-            image: author,
-            rating: 5,
-        },
-        {
-            id: 13,
-            content:
-                "LN Sols developed a highly intuitive mobile app for us that has greatly improved our customer interactions and satisfaction. Their expertise in mobile application development is impressive.",
-            author: "Priya Sharma",
-            position: "Marketing Head, NextGen Apps",
-            image: author,
-            rating: 4.6,
-        },
-        {
-            id: 14,
-            content:
-                "The analytics solutions provided by LN Sols have given us deep insights into our business performance. Their teams ability to turn data into actionable strategies is invaluable.",
-            author: "Arjun Patel",
-            position: "Director of Analytics, DataEdge Analytics",
-            image: author,
-            rating: 4.7,
-        },
-        {
-            id: 15,
-            content:
-                "LN Sols has been instrumental in optimizing our web platform. Their teams dedication to understanding our requirements and delivering tailored solutions has exceeded our expectations.",
-            author: "Neha Desai",
-            position: "Product Lead, WebWizards Ltd.",
-            image: author,
-            rating: 5,
-        },
+        // {
+        //     id: 11,
+        //     content:
+        //         "LN Sols’ web development team created a robust and user-friendly website for us, which has enhanced our online visibility and customer engagement significantly. Highly recommended!",
+        //     author: "Anjali Mehta",
+        //     position: "Founder & CEO, GreenTech Solutions",
+        //     image: author,
+        //     rating: 4.4,
+        // },
+        // {
+        //     id: 12,
+        //     content:
+        //         "Their cloud development services have streamlined our operations and reduced our costs. The team at LN Sols was knowledgeable and professional throughout the entire process.",
+        //     author: "Ravi Kumar",
+        //     position: "Chief Operations Officer, CloudReach Pvt. Ltd.",
+        //     image: author,
+        //     rating: 5,
+        // },
+        // {
+        //     id: 13,
+        //     content:
+        //         "LN Sols developed a highly intuitive mobile app for us that has greatly improved our customer interactions and satisfaction. Their expertise in mobile application development is impressive.",
+        //     author: "Priya Sharma",
+        //     position: "Marketing Head, NextGen Apps",
+        //     image: author,
+        //     rating: 4.6,
+        // },
+        // {
+        //     id: 14,
+        //     content:
+        //         "The analytics solutions provided by LN Sols have given us deep insights into our business performance. Their teams ability to turn data into actionable strategies is invaluable.",
+        //     author: "Arjun Patel",
+        //     position: "Director of Analytics, DataEdge Analytics",
+        //     image: author,
+        //     rating: 4.7,
+        // },
+        // {
+        //     id: 15,
+        //     content:
+        //         "LN Sols has been instrumental in optimizing our web platform. Their teams dedication to understanding our requirements and delivering tailored solutions has exceeded our expectations.",
+        //     author: "Neha Desai",
+        //     position: "Product Lead, WebWizards Ltd.",
+        //     image: author,
+        //     rating: 5,
+        // },
     ];
 
     return (
