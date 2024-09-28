@@ -5,8 +5,8 @@ import { isNull, isObject } from "lodash";
 import { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
+import Footer from "./components/common/footer/footer";
+import Header from "./components/common/header/header";
 
 import WOW from "wowjs";
 // import logoTwo from "./assets/images/logo/logo-2.svg";

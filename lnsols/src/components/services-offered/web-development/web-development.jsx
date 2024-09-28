@@ -1,5 +1,5 @@
 import aboutImage from "assets/images/about/about-image.svg";
-import Contact from "components/common/contact";
+import Contact from "components/common/contact/contact";
 import Testimonials from "components/testimonials/testimonials";
 import "./web-development.css";
 

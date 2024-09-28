@@ -1,5 +1,5 @@
 import About from "components/about/about";
-import Contact from "components/common/contact";
+import Contact from "components/common/contact/contact";
 import Testimonials from "components/testimonials/testimonials";
 import FireParticles from "components/utils/fire-particles";
 import { Component } from "react";

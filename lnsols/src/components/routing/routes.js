@@ -3,7 +3,7 @@ import React from "react";
 const Home = React.lazy(() => import("components/home/home"));
 const Blog = React.lazy(() => import("components/blog/blog"));
 const About = React.lazy(() => import("components/about/about"));
-const ContactUs = React.lazy(() => import("components/contact/contact-us"));
+const ContactUs = React.lazy(() => import("components/common/contact/contact"));
 const NotFound = React.lazy(() => import("components/not-found/not-found"));
 const MobileApps = React.lazy(() =>
     import("components/services-offered/mobile-apps")
