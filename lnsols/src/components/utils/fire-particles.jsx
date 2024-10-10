@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { useEffect, useMemo, useState } from "react";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -40,70 +40,70 @@ const FireParticles = ({ height }) => {
             // },
             fpsLimit: 120,
             fullScreen: {
-                enable: false,
+                enable: false
             },
             style: {
-                height,
+                height
             },
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
-                        mode: "push",
+                        enable: false,
+                        mode: "push"
                     },
                     onHover: {
                         enable: true,
-                        mode: "repulse",
-                    },
+                        mode: "repulse"
+                    }
                 },
                 modes: {
                     push: {
-                        quantity: 4,
+                        quantity: 4
                     },
                     repulse: {
                         distance: 200,
-                        duration: 0.4,
-                    },
-                },
+                        duration: 0.4
+                    }
+                }
             },
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: "#ffffff"
                 },
                 links: {
                     color: "#ffffff",
                     distance: 150,
                     enable: true,
                     opacity: 0.5,
-                    width: 1,
+                    width: 1
                 },
                 move: {
                     direction: "none",
                     enable: true,
                     outModes: {
-                        default: "bounce",
+                        default: "bounce"
                     },
                     random: false,
                     speed: 6,
-                    straight: false,
+                    straight: false
                 },
                 number: {
                     density: {
-                        enable: true,
+                        enable: true
                     },
-                    value: 160,
+                    value: 200
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.5
                 },
                 shape: {
-                    type: "circle",
+                    type: "circle"
                 },
                 size: {
-                    value: { min: 1, max: 5 },
-                },
+                    value: { min: 1, max: 5 }
+                }
             },
-            detectRetina: true,
+            detectRetina: true
         }),
         []
     );

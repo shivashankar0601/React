@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 // import logo from "./../../assets/logo.jpg";
 // import logo from "../../assets/images/logo/logo.svg";
 
@@ -32,13 +33,13 @@ class Header extends Component {
 
     // NavbarBrand component
     NavbarBrand = () => (
-        <a className="navbar-brand brand-logo" href="/">
+        <Link className="navbar-brand brand-logo" to="/">
             {/* <img src={logo} alt="Logo" /> */}
             LN Sols
             <div className="brand-logo-tag-name">
                 Empowering future solutions
             </div>
-        </a>
+        </Link>
     );
 
     // NavbarToggler component

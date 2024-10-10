@@ -1,7 +1,11 @@
 {
-    "name": "sidebar",
+    "name": "lnsols",
     "version": "0.1.0",
     "private": true,
+    "main": "index.js",
+    "author": "Shiva Shankar Pandillapalli",
+    "license": "Private",
+    "description": "lnsols.com: A cutting-edge React web application delivering innovative solutions for modern businesses, with a focus on user-friendly interfaces, robust functionality, and seamless integration.",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.5.1",
         "@fortawesome/free-regular-svg-icons": "^6.5.1",

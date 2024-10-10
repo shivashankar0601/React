@@ -3,7 +3,7 @@ import React from "react";
 const Home = React.lazy(() => import("components/home/home"));
 const Blog = React.lazy(() => import("components/blog/blog"));
 const About = React.lazy(() => import("components/about/about"));
-const ContactUs = React.lazy(() => import("components/common/contact/contact"));
+const Contact = React.lazy(() => import("components/common/contact/contact"));
 const NotFound = React.lazy(() => import("components/not-found/not-found"));
 const MobileApps = React.lazy(() =>
     import("components/services-offered/mobile-apps")
@@ -22,16 +22,16 @@ const PrivacyPolicy = React.lazy(() =>
 );
 
 const routes = [
-    { path: "/", element: <Home /> },
+    { path: "/", element: <Home />, errorElement: <NotFound /> },
     { path: "/blog", element: <Blog /> },
     { path: "/about", element: <About /> },
-    { path: "/contact", element: <ContactUs /> },
+    { path: "/contact", element: <Contact /> },
     { path: "/mobile-apps", element: <MobileApps /> },
     { path: "/web-development", element: <WebDevelopment /> },
     { path: "/data-analytics", element: <DataAnalytics /> },
     { path: "/cloud", element: <CloudServices /> },
-    { path: "/privacy-policy", element: <PrivacyPolicy /> },
-    { path: "*", element: <NotFound /> },
+    { path: "/privacy-policy", element: <PrivacyPolicy /> }
+    //   { path: "*", element: <NotFound /> },
 ];
 
 export default routes;

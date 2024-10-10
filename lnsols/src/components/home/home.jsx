@@ -3,13 +3,14 @@ import Contact from "components/common/contact/contact";
 import Testimonials from "components/testimonials/testimonials";
 import FireParticles from "components/utils/fire-particles";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import WOW from "wowjs";
 import "./home.css";
 
 class Home extends Component {
     componentDidMount() {
         new WOW.WOW({
-            live: false,
+            live: false
         }).init();
         // const navigate = useNavigate();
     }
@@ -189,12 +190,12 @@ class Home extends Component {
                                             embark on a journey of digital
                                             excellence. */}
                                         </p>
-                                        <a
-                                            href="web-development"
+                                        <Link
+                                            to="web-development"
                                             className="ln-feature-link"
                                         >
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -219,12 +220,12 @@ class Home extends Component {
                                             Trusted Partner for Next-Generation
                                             Success.
                                         </p>
-                                        <a
-                                            href="cloud"
+                                        <Link
+                                            to="cloud"
                                             className="ln-feature-link"
                                         >
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -250,12 +251,12 @@ class Home extends Component {
                                             Tailors Solutions to Drive Your
                                             Success in the Data-Driven Era.
                                         </p>
-                                        <a
-                                            href="data-analytics"
+                                        <Link
+                                            to="data-analytics"
                                             className="ln-feature-link"
                                         >
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -283,13 +284,12 @@ class Home extends Component {
                                             Let's Build Your Next Mobile Success
                                             Story Together.
                                         </p>
-                                        <a
-                                            href="/mobile-apps"
+                                        <Link
+                                            to="mobile-apps"
                                             className="ln-feature-link"
-                                            // onClick={navigate("/mobile-apps")}
                                         >
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

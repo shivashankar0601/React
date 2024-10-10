@@ -13,7 +13,7 @@ const Testimonials = () => {
             author: "Jane Doe",
             position: "CEO, Tech Innovators Inc.",
             image: author,
-            rating: 3.9,
+            rating: 3.9
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ const Testimonials = () => {
             author: "John Smith",
             position: "CTO, Global Enterprises Ltd.",
             image: author,
-            rating: 4.2,
+            rating: 4.2
         },
         {
             id: 3,
@@ -31,7 +31,7 @@ const Testimonials = () => {
             author: "Alice Johnson",
             position: "Marketing Director, AppMasters Co.",
             image: author,
-            rating: 4.9,
+            rating: 4.9
         },
         {
             id: 4,
@@ -40,7 +40,7 @@ const Testimonials = () => {
             author: "Bob Brown",
             position: "Founder, Data Driven Solutions",
             image: author,
-            rating: 5,
+            rating: 5
         },
         {
             id: 5,
@@ -49,8 +49,8 @@ const Testimonials = () => {
             author: "Sara Lee",
             position: "COO, Future Tech Innovations",
             image: author,
-            rating: 5,
-        },
+            rating: 5
+        }
         // {
         //     id: 6,
         //     content:
@@ -144,7 +144,7 @@ const Testimonials = () => {
     ];
 
     return (
-        <section id="testimonials" className="ln-testimonials m-5">
+        <section id="testimonials" className="ln-testimonials">
             {/* ====== Testimonials Start ====== */}
             <div className="container">
                 <div className="row">

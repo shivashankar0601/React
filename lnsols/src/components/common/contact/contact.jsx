@@ -8,14 +8,14 @@ const Contact = () => {
         fullName: "",
         email: "",
         phoneNumber: "",
-        message: "",
+        message: ""
     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: value,
+            [name]: value
         }));
         if (name === "phoneNumber") {
             setPhoneError("");
@@ -55,7 +55,7 @@ const Contact = () => {
                 fullName: "",
                 email: "",
                 phoneNumber: "",
-                message: "",
+                message: ""
             });
         } catch (error) {
             console.error(error);
@@ -106,9 +106,9 @@ const Contact = () => {
                                                 className="ln-info-link"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                href="mailto:lnsolspvtltd@gmail.com?subject=Inquiry&body=Hello, I would like more information about your services."
+                                                href="mailto:contact@lnsols.com?subject=Inquiry&body=Hello, I would like more information about your services."
                                             >
-                                                lnsolspvtltd@gmail.com
+                                                contact@lnsols.com
                                             </a>
                                         </p>
                                         {/* <p>contact@lnsols.com</p> */}

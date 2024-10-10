@@ -30,7 +30,10 @@ export const SuccessModal = ({ show, handleClose }) => {
                         ></button>
                     </div>
                     <div className="modal-body">
-                        <p>Your message has been sent successfully!</p>
+                        <p>
+                            Thanks for reaching out! We’re excited to connect
+                            and will get back to you shortly.
+                        </p>
                     </div>
                     <div className="modal-footer">
                         <button
@@ -82,7 +85,7 @@ export const ErrorModal = ({ show, handleClose }) => (
                 </div>
             </div>
         </div>
-        <style jsx>{`
+        <style>{`
             .error-modal {
                 border: 1px solid #dc3545;
                 background-color: #f8d7da;

@@ -1,21 +1,18 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import * as icons from "@fortawesome/free-solid-svg-icons";
+import routes from "components/routing/routes";
 import Loading from "components/utils/loading/loading";
 import { isNull, isObject } from "lodash";
-import { Component } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Component, Suspense } from "react";
+import { Route, BrowserRouter, Routes, Link } from "react-router-dom";
+// import { BrowserRouter as Router, RouterProvider } from "react-router-dom";
+import WOW from "wowjs";
 import "./App.css";
 import Footer from "./components/common/footer/footer";
 import Header from "./components/common/header/header";
 
-import WOW from "wowjs";
 // import logoTwo from "./assets/images/logo/logo-2.svg";
 // import logo from "./assets/images/logo/logo.svg";
-
-import routes from "components/routing/routes";
-
-import { Suspense } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 
 library.add(
     ...Object.keys(icons)
@@ -24,62 +21,22 @@ library.add(
 );
 
 class App extends Component {
-    // const menuItems = [
-    //     {
-    //         id: 1,
-    //         name: "Home",
-    //         url: "/",
-    //         icon: "fa-house",
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "Clients",
-    //         url: "/clients",
-    //         icon: "fa-users",
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "Testimonials",
-    //         url: "testimonials",
-    //         // icon: "fa-comments",
-    //         icon: "fa-pen-nib",
-    //     },
-    //     {
-    //         id: 4,
-    //         name: "About",
-    //         url: "about",
-    //         icon: "fa-address-card",
-    //     },
-    //     {
-    //         id: 5,
-    //         name: "Blog",
-    //         url: "blog",
-    //         icon: "fa-users",
-    //     },
-    //     {
-    //         id: 6,
-    //         name: "Careers",
-    //         url: "careers",
-    //         icon: "fa-users",
-    //     },
-    // ];
-
     componentDidMount() {
         new WOW.WOW({
-            live: false,
+            live: false
         }).init();
 
         window.addEventListener("scroll", this.handleScroll);
-        let backToTop = document.querySelector(".back-to-top");
-        if (backToTop) {
-            backToTop.onclick = () => {
-                this.scrollTo(document.documentElement);
-            };
-        }
-    }
 
-    componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
+        // should not use set timeout, but for the time being i am using it
+        setTimeout(() => {
+            let backToTop = document.querySelector(".back-to-top");
+            if (backToTop) {
+                backToTop.onclick = () => {
+                    this.scrollTo(document.documentElement);
+                };
+            }
+        }, 500);
     }
 
     scrollTo(element, to = 0, duration = 500) {
@@ -154,18 +111,22 @@ class App extends Component {
         }
     }
 
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+
     /* End of utility methods */
 
     render() {
         return (
-            <Router>
-                <div className="app">
-                    <div className="header">
-                        <Header />
-                    </div>
-                    <div className="content-wrapper">
-                        <main className="main-content">
-                            <Suspense fallback={<Loading />}>
+            <BrowserRouter>
+                <Suspense fallback={<Loading />}>
+                    <div className="app">
+                        <div className="header">
+                            <Header />
+                        </div>
+                        <div className="content-wrapper">
+                            <main className="main-content">
                                 <Routes>
                                     {routes.map((route) => (
                                         <Route
@@ -175,19 +136,18 @@ class App extends Component {
                                         />
                                     ))}
                                 </Routes>
-                            </Suspense>
-                        </main>
+                            </main>
+                        </div>
+                        <div className="footer">
+                            <Footer />
+                        </div>
+                        {/* Back To Top */}
+                        <Link to="javascript:void(0)" className="back-to-top">
+                            <i className="lni lni-chevron-up"> </i>
+                        </Link>
                     </div>
-                    <div className="footer">
-                        <Footer />
-                    </div>
-                    {/* ====== Back To Top Start ====== */}
-                    <a href="javascript:void(0)" className="back-to-top">
-                        <i className="lni lni-chevron-up"> </i>
-                    </a>
-                    {/* ====== Back To Top End ====== */}
-                </div>
-            </Router>
+                </Suspense>
+            </BrowserRouter>
         );
     }
 }

@@ -1,7 +1,7 @@
 .ln-collapsible-card {
     position: relative;
     margin: 20px auto;
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -12,7 +12,8 @@
     padding: 15px;
     /* border-bottom: 1px solid #ffffff; */
     font-size: 18px;
-    color: var(--body-color);
+    /* color: var(--body-color); */
+    color: var(--primary-color);
     transition: background-color 0s ease;
     margin: 0px;
 }
@@ -38,6 +39,7 @@
 
 .ln-collapsible-card:hover .ln-collapsible-heading {
     color: var(--primary-color);
+    /* color: var(--body-color); */
     /* background-color: #ffffff; */
 }
 

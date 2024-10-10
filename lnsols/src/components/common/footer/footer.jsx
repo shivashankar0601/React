@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <footer className="ln-footer wow fadeInUp" data-wow-delay=".15s">
@@ -7,13 +9,13 @@ const Footer = () => {
                         {/* <div className="col-xl-3 col-lg-4 col-md-6"> */}
                         <div className="col">
                             <div className="ln-widget">
-                                <a className="ln-footer-logo" href="/">
+                                <Link className="ln-footer-logo" to="/">
                                     {/* <img src={logo} alt="Logo" /> */}
                                     LN Sols
                                     <div className="brand-logo-tag-name">
                                         Empowering future solutions
                                     </div>
-                                </a>
+                                </Link>
                                 <p className="ln-widget-desc">
                                     We transform your Business with our
                                     customized tech solutions.
